@@ -7,18 +7,20 @@ $sm: 768px;
 $md: 1024px;
 $lg: 1200px;
 
-
 /*************************
 ** Colours **
 *************************/
-$theme-highlight: #C59A00;
-
+$theme-highlight: #c59a00;
 
 /*************************
 ** Typography **
 *************************/
 
-$font-headline: CanelaDeck, Times New Roman, Times, serif;
+$font-headline:
+  CanelaDeck,
+  Times New Roman,
+  Times,
+  serif;
 $font-body: 'Manrope', Arial, sans-serif;
 $normal: 400;
 $bold: 700;
@@ -34,7 +36,6 @@ $bold: 700;
   font-style: normal;
   font-weight: $normal;
 }
-
 
 /*************************
 ** Grid **
@@ -62,7 +63,6 @@ $cols: 12;
   gap: rem(24px);
 }
 
-
 /*************************
 ** Accessibility **
 *************************/
@@ -76,7 +76,6 @@ $cols: 12;
   font-size: 1rem;
 }
 
-
 /*************************
 ** Theme **
 *************************/
@@ -85,13 +84,12 @@ $cols: 12;
   color: $color;
 }
 
-
 /*************************
 ** Layout **
 *************************/
-$html-font-size:  16px;
+$html-font-size: 16px;
 @media screen and (min-width: $lg) {
-  $html-font-size:  18px;
+  $html-font-size: 18px;
 }
 
 @function stripUnit($value) {

@@ -15,26 +15,26 @@ const config: StorybookConfig = {
     {
       name: '@storybook/addon-styling-webpack',
       options: {
-          rules: [
+        rules: [
+          {
+            test: /\.scss$/,
+            use: [
+              'style-loader',
+              'css-loader',
               {
-                  test: /\.scss$/,
-                  use: [
-                      'style-loader',
-                      'css-loader',
-                      {
-                          loader: 'sass-loader',
-                          options: {
-                              implementation: require.resolve('sass'),
-                              sassOptions: {
-                                  includePaths: ['node_modules'],
-                              },
-                          },
-                      },
-                  ],
-              },
-          ],
-      },
-  }
+                loader: 'sass-loader',
+                options: {
+                  implementation: require.resolve('sass'),
+                  sassOptions: {
+                    includePaths: ['node_modules']
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
   ],
   framework: {
     name: '@storybook/react-webpack5',
@@ -45,6 +45,6 @@ const config: StorybookConfig = {
   },
   core: {
     disableTelemetry: true
-  },
+  }
 };
 export default config;

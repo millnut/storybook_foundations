@@ -1,5 +1,6 @@
 !.storybook
 /node_modules/
 /storybook/
+/storybook-static/
 /dist/
 /public/
