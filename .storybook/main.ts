@@ -17,17 +17,30 @@ const config: StorybookConfig = {
       options: {
         rules: [
           {
-            test: /\.scss$/,
+            test: /\.s[ac]ss$/,
+            sideEffects: true,
             use: [
-              'style-loader',
-              'css-loader',
+              require.resolve('style-loader'),
               {
-                loader: 'sass-loader',
+                loader: require.resolve('css-loader'),
                 options: {
+                  importLoaders: 3
+                }
+              },
+              {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                  implementation: require.resolve('postcss')
+                }
+              },
+              require.resolve('resolve-url-loader'),
+              {
+                loader: require.resolve('sass-loader'),
+                options: {
+                  // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
                   implementation: require.resolve('sass'),
-                  sassOptions: {
-                    includePaths: ['node_modules']
-                  }
+                  sourceMap: true,
+                  sassOptions: {}
                 }
               }
             ]
@@ -44,7 +57,14 @@ const config: StorybookConfig = {
     autodocs: 'tag'
   },
   core: {
-    disableTelemetry: true
+    disableTelemetry: true,
+    builder: {
+      name: '@storybook/builder-webpack5',
+      options: {
+        fsCache: true,
+        lazyCompilation: true
+      }
+    }
   }
 };
 export default config;
