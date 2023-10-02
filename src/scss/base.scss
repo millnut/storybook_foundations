@@ -1,0 +1,91 @@
+@import './lib.scss';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  @media screen and (min-width: $sm) {
+    font-size: 18px;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  outline: none;
+}
+
+button,
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+blockquote {
+  margin: 0;
+}
+
+input {
+}
+
+figure {
+  margin: 0;
+}
+
+.sr-only {
+  @include sr-only;
+}
+
+::selection {
+  background: $theme-highlight;
+}
+::-moz-selection {
+  background: $theme-highlight;
+}

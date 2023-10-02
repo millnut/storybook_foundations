@@ -1,0 +1,64 @@
+{
+  "name": "storybook-foundations",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@storybook/addon-a11y": "^7.4.5",
+    "@storybook/addon-essentials": "^7.4.5",
+    "@storybook/addon-interactions": "^7.4.5",
+    "@storybook/addon-links": "^7.4.5",
+    "@storybook/addon-styling-webpack": "^0.0.4",
+    "@storybook/blocks": "^7.4.5",
+    "@storybook/react": "^7.4.5",
+    "@storybook/react-webpack5": "^7.4.5",
+    "@types/react": "^16.8.0",
+    "@types/sanitize-html": "^2.9.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.14",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2",
+    "storybook": "^7.4.5",
+    "storybook-addon-performance": "^0.17.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {
+    "@storybook/testing-library": "^0.2.1",
+    "sanitize-html": "^2.11.0"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --max-warnings 0",
+    "pretty": "prettier --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run pretty",
+      "npm run lint"
+    ]
+  }
+}

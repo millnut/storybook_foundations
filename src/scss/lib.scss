@@ -1,0 +1,102 @@
+@import './fonts.scss';
+
+/*************************
+** Breakpoints **
+*************************/
+$sm: 768px;
+$md: 1024px;
+$lg: 1200px;
+
+
+/*************************
+** Colours **
+*************************/
+$theme-highlight: #C59A00;
+
+
+/*************************
+** Typography **
+*************************/
+
+$font-headline: CanelaDeck, Times New Roman, Times, serif;
+$font-body: 'Manrope', Arial, sans-serif;
+$normal: 400;
+$bold: 700;
+
+@mixin font-headline($weight: $normal) {
+  font-family: $font-headline;
+  font-style: normal;
+  font-weight: $weight;
+}
+
+@mixin font-body {
+  font-family: $font-body;
+  font-style: normal;
+  font-weight: $normal;
+}
+
+
+/*************************
+** Grid **
+*************************/
+$width: 1152px;
+$cols: 12;
+
+@mixin container($width: $width) {
+  max-width: $width;
+  margin: 0 auto;
+  padding: 0 1rem;
+  @media screen and (min-width: $sm) {
+    padding: 0 2rem;
+    max-width: calc($width + 4rem);
+  }
+  @media screen and (min-width: $lg) {
+    padding: 0 5rem;
+    max-width: calc($width + 10rem);
+  }
+}
+
+@mixin grid($cols: $cols, $size: 1fr) {
+  display: grid;
+  grid-template-columns: repeat($cols, $size);
+  gap: rem(24px);
+}
+
+
+/*************************
+** Accessibility **
+*************************/
+@mixin sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+
+/*************************
+** Theme **
+*************************/
+@mixin theme($background, $color) {
+  background-color: $background;
+  color: $color;
+}
+
+
+/*************************
+** Layout **
+*************************/
+$html-font-size:  16px;
+@media screen and (min-width: $lg) {
+  $html-font-size:  18px;
+}
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
