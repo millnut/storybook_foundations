@@ -51,20 +51,18 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: '@storybook/react-webpack5',
-    options: {}
+    options: {
+      builder: {
+        fsCache: true,
+        lazyCompilation: true
+      }
+    }
   },
   docs: {
     autodocs: 'tag'
   },
   core: {
-    disableTelemetry: true,
-    builder: {
-      name: '@storybook/builder-webpack5',
-      options: {
-        fsCache: true,
-        lazyCompilation: true
-      }
-    }
+    disableTelemetry: true
   }
 };
 export default config;

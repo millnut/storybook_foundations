@@ -1,5 +1,5 @@
 {
-  "name": "storybook-foundations",
+  "name": "@millnut/storybook-foundations",
   "version": "1.0.0",
   "main": "index.js",
   "license": "",
@@ -9,14 +9,14 @@
     "@babel/preset-typescript": "^7.23.0",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "@storybook/addon-a11y": "^7.4.5",
-    "@storybook/addon-essentials": "^7.4.5",
-    "@storybook/addon-interactions": "^7.4.5",
-    "@storybook/addon-links": "^7.4.5",
-    "@storybook/addon-styling-webpack": "^0.0.4",
-    "@storybook/blocks": "^7.4.5",
-    "@storybook/react": "^7.4.5",
-    "@storybook/react-webpack5": "^7.4.5",
+    "@storybook/addon-a11y": "^7.4.6",
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-interactions": "^7.4.6",
+    "@storybook/addon-links": "^7.4.6",
+    "@storybook/addon-styling-webpack": "^0.0.5",
+    "@storybook/blocks": "^7.4.6",
+    "@storybook/react": "^7.4.6",
+    "@storybook/react-webpack5": "^7.4.6",
     "@types/react": "^18.2.0",
     "@types/sanitize-html": "^2.9.1",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
@@ -39,7 +39,7 @@
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
-    "storybook": "^7.4.5",
+    "storybook": "^7.4.6",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
@@ -47,7 +47,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@storybook/testing-library": "^0.2.1",
+    "@storybook/testing-library": "^0.2.2",
     "sanitize-html": "^2.11.0",
     "storybook-addon-performance": "^0.17.1"
   },
