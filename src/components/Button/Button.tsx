@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import clsx from 'clsx';
 import './button.scss';
 
 interface ButtonProps {
@@ -38,7 +39,7 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={clsx('storybook-button', size && `storybook-button--${size}`, mode)}
       style={{ backgroundColor }}
       {...props}
     >
