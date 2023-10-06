@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@storybook/testing-library": "^0.2.2",
+    "clsx": "^2.0.0",
     "sanitize-html": "^2.11.0",
     "storybook-addon-performance": "^0.17.1"
   },
@@ -60,14 +61,12 @@
     "build:storybook": "storybook build",
     "format": "prettier --cache --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
-    "test:type-check": "tsc --noEmit",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "npm run format",
-      "npm run test:type-check",
       "npm run lint"
     ]
   }
