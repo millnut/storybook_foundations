@@ -1,0 +1,45 @@
+$themes: (
+  light: (
+    backgroundColor: #fff,
+    textColor: #000,
+  ),
+  dark: (
+    backgroundColor: #000,
+    textColor: #fff,
+  )
+);
+
+@mixin customize($arg: theme) {
+  $array: $themes;
+  $prefix: theme;
+
+  @if ($arg == theme) {
+    $array: $themes;
+    $prefix: theme;
+  } @else {
+    $array: $color-schemes;
+    $prefix: color;
+  }
+
+  @each $theme, $map in $array {
+    &.#{$prefix}--#{$theme} {
+      $array-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($array, $theme), '#{$key}');
+        $array-map: map-merge(
+          $array-map,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
+
+      @content;
+      $array-map: null !global;
+    }
+  }
+}
+
+@function getValue($key) {
+  @return map-get($array-map, $key);
+}

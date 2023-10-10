@@ -18,4 +18,3 @@ const useTheme = (): UseThemeProps => {
 };
 
 export default useTheme;
-

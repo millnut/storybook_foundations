@@ -57,7 +57,7 @@
     "storybook-addon-performance": "^0.17.1"
   },
   "scripts": {
-    "start:storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
     "format": "prettier --cache --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
