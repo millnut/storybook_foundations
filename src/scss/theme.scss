@@ -1,11 +1,13 @@
+@import './colors.scss';
+
 $themes: (
   light: (
-    backgroundColor: #fff,
-    textColor: #000
+    backgroundColor: $white,
+    textColor: $black
   ),
   dark: (
-    backgroundColor: #000,
-    textColor: #fff
+    backgroundColor: $black,
+    textColor: $white
   )
 );
 

@@ -1,12 +1,11 @@
 @import '../../scss/lib.scss';
 
-.button {
-padding: rem(10px) rem(20px);
-border: 1px solid $black;
-border-radius: 5px;
-text-decoration: none;
+.text-image {
   @include customize(theme) {
     background: getValue(backgroundColor);
     color: getValue(textColor);
   }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: rem(10px);
 }

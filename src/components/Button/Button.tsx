@@ -1,24 +1,13 @@
 import React, { ReactElement } from 'react';
-import clsx from 'clsx';
 import './button.scss';
+import useTheme from '../../hooks/useDarkMode';
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
   label: string;
+  /**
+   * Optional url
+   */
+  url?: string;
   /**
    * Optional click handler
    */
@@ -28,21 +17,15 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps): ReactElement => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
-    <button
-      type="button"
-      className={clsx('storybook-button', size && `storybook-button--${size}`, mode)}
-      style={{ backgroundColor }}
-      {...props}
-    >
+
+export const Button = ({ label, url, ...props }: ButtonProps): ReactElement => {
+  const theme = useTheme();
+  return url ? (
+    <a className={`button theme--${theme.mode}`} href={url}>
+      {label}
+    </a>
+  ) : (
+    <button type="button" className={`button theme--${theme.mode}`} {...props}>
       {label}
     </button>
   );
