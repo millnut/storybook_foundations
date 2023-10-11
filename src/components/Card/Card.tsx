@@ -16,16 +16,43 @@ interface CardProps {
    * The description
    */
   body: string;
+  /**
+   * The url used to link the card
+   */
+  url?: string;
 }
 
-export default function Card({ image, title, body }: CardProps): ReactNode {
+export default function Card({ image, title, body, url }: CardProps): ReactNode {
   const theme = useTheme();
+
+  function handleClick(e: React.MouseEvent<HTMLElement>): void {
+    const link = e.currentTarget.querySelector('a');
+    if (link) {
+      link.click();
+    }
+  }
+
   return (
-    <li className={`card theme--${theme.mode}`}>
-      <Image src={image.src} width={400} height={400} altText={image.altText} />
+    <li
+      className={`card theme--${theme.mode}`}
+      onClick={(event) => {
+        handleClick(event);
+      }}
+    >
+      {image.src && <Image src={image.src} width={400} height={400} altText={image.altText} />}
       <span className="card__container">
-        <h2 className="card__title">{title}</h2>
-        <p className="card__body">{body}</p>
+        {title && (
+          <h2 className="card__title">
+            {url ? (
+              <a className="card__link" href={url}>
+                {title}
+              </a>
+            ) : (
+              title
+            )}
+          </h2>
+        )}
+        {body && <p className="card__body">{body}</p>}
       </span>
     </li>
   );
