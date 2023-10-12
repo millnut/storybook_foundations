@@ -39,13 +39,4 @@ Button.defaultProps = {
   }
 };
 
-// export const buttonProps: ButtonProps = {
-//   label: 'Button'
-// };
-
-// export const buttonLinkProps: ButtonProps = {
-//   label: 'Button',
-//   url: 'https://example.com'
-// };
-
 export default Button;
