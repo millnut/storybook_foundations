@@ -10,3 +10,5 @@ export const imageProps: ImageProps = {
   height: 500,
   altText: 'An example image'
 };
+
+export default imageProps;

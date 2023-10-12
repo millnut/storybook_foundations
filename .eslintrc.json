@@ -45,6 +45,7 @@
     "arrow-body-style": ["warn", "as-needed"],
     "no-underscore-dangle": ["error", { "allow": ["_source", "_id", "__typename", "__session"] }],
     "indent": "off",
-    "@typescript-eslint/indent": 0
+    "@typescript-eslint/indent": 0,
+    "import/prefer-default-export": ["error", { "target": "single" }]
   }
 }
