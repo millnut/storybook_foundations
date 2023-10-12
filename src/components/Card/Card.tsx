@@ -3,7 +3,7 @@ import useTheme from '../../hooks/useDarkMode';
 import Image, { ImageProps } from '../Image/Image';
 import './Card.scss';
 
-interface CardProps {
+export interface CardProps {
   /**
    * Is this the principal call to action on the page?
    */

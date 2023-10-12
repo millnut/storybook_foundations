@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactNode } from 'react';
 import './listing.scss';
 
-interface ListingProps {
+export interface ListingProps {
   children: ReactNode;
 }
 

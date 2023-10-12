@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import './button.scss';
 import useTheme from '../../hooks/useDarkMode';
 
-interface ButtonProps {
+export interface ButtonProps {
   label: string;
   /**
    * Optional url

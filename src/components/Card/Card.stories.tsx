@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Card from './Card';
-import { cardData } from './cardData';
+import { cardProps } from './defaultProps';
 
 const meta = {
   title: 'Example/Card',
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...cardData
+    ...cardProps
   }
 };
