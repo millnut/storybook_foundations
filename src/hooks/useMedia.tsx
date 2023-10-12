@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useMobile(mobileWidth = '768px', boolean = true): boolean {
+export default function useMobile(mobileWidth = '768px', boolean = true): boolean {
   const [mobile, setMobile] = useState(boolean);
 
   useEffect(() => {

@@ -8,3 +8,5 @@ export const buttonLinkProps: ButtonProps = {
   label: 'Button',
   url: 'https://example.com'
 };
+
+export default buttonProps;

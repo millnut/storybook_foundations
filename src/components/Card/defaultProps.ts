@@ -14,3 +14,5 @@ export const cardProps: CardProps = {
   title: 'Example title',
   body: 'Example body text'
 };
+
+export default cardProps;
