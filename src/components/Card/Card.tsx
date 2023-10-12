@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactElement } from 'react';
 import useTheme from '../../hooks/useDarkMode';
 import Image, { ImageProps } from '../Image/Image';
 import './Card.scss';
@@ -22,7 +22,7 @@ export interface CardProps {
   url?: string;
 }
 
-export default function Card({ image, title, body, url }: CardProps): ReactNode {
+const Card = ({ image, title, body, url }: CardProps): ReactElement => {
   const theme = useTheme();
 
   function handleClick(e: React.MouseEvent<HTMLElement>): void {
@@ -56,4 +56,6 @@ export default function Card({ image, title, body, url }: CardProps): ReactNode 
       </span>
     </li>
   );
-}
+};
+
+export default Card;

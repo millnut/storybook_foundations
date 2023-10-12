@@ -5,6 +5,6 @@ export interface ListingProps {
   children: ReactNode;
 }
 
-export default function Listing({ children }: ListingProps): ReactElement {
-  return <ul className="listing">{children}</ul>;
-}
+const Listing = ({ children }: ListingProps): ReactElement => <ul className="listing">{children}</ul>;
+
+export default Listing;
