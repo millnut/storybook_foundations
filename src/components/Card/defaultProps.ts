@@ -1,4 +1,6 @@
-export const cardData = {
+import { CardProps } from './Card';
+
+export const cardProps: CardProps = {
   image: {
     src: {
       small: 'https://picsum.photos/200/300',

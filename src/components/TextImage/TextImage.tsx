@@ -3,7 +3,7 @@ import useTheme from '../../hooks/useDarkMode';
 import Image, { ImageProps } from '../Image/Image';
 import './textImage.scss';
 
-interface TextImageProps {
+export interface TextImageProps {
   /**
    * Title text
    */
