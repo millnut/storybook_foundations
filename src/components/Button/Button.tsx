@@ -33,7 +33,7 @@ const Button = ({ label, url, ...props }: ButtonProps): ReactElement => {
 
 Button.defaultProps = {
   label: 'Button',
-  buttonLinkProps: {
+  buttonlinkprops: {
     label: 'Button',
     url: '#'
   }

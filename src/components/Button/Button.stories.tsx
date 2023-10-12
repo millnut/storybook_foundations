@@ -21,6 +21,6 @@ export const PrimaryButton: Story = {
 
 export const ButtonLink: Story = {
   args: {
-    ...Button.defaultProps.buttonLinkProps
+    ...Button.defaultProps.buttonlinkprops
   }
 };
