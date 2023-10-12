@@ -14,3 +14,5 @@ export const textImageProps: TextImageProps = {
     altText: 'An example image'
   }
 };
+
+export default textImageProps;
