@@ -3,7 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:storybook/recommended", "airbnb", "airbnb-typescript"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:storybook/recommended", "airbnb", "airbnb-typescript", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -18,7 +18,8 @@
       "files": ["*.ts", "*.tsx"],
       "extends": [
         "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:prettier/recommended"
       ],
       "parserOptions": {
         "project": ["./tsconfig.json"]
