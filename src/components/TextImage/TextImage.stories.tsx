@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import TextImage from './TextImage';
-import textImageProps from './defaultProps';
 
 const meta = {
   title: 'Example/TextImage',
@@ -16,6 +15,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    ...textImageProps
+    ...TextImage.defaultProps
   }
 };

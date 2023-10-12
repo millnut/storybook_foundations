@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
-import buttonProps, { buttonLinkProps } from './defaultProps';
 
 const meta = {
   title: 'Example/Button',
@@ -16,12 +15,12 @@ type Story = StoryObj<typeof meta>;
 
 export const PrimaryButton: Story = {
   args: {
-    ...buttonProps
+    ...Button.defaultProps
   }
 };
 
 export const ButtonLink: Story = {
   args: {
-    ...buttonLinkProps
+    ...Button.defaultProps.buttonLinkProps
   }
 };

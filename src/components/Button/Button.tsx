@@ -31,4 +31,21 @@ const Button = ({ label, url, ...props }: ButtonProps): ReactElement => {
   );
 };
 
+Button.defaultProps = {
+  label: 'Button',
+  buttonLinkProps: {
+    label: 'Button',
+    url: '#'
+  }
+};
+
+// export const buttonProps: ButtonProps = {
+//   label: 'Button'
+// };
+
+// export const buttonLinkProps: ButtonProps = {
+//   label: 'Button',
+//   url: 'https://example.com'
+// };
+
 export default Button;
