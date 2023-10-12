@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import './button.scss';
 import useTheme from '../../hooks/useDarkMode';
+import './button.scss';
 
 export interface ButtonProps {
   label: string;
@@ -18,7 +18,7 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 
-export const Button = ({ label, url, ...props }: ButtonProps): ReactElement => {
+const Button = ({ label, url, ...props }: ButtonProps): ReactElement => {
   const theme = useTheme();
   return url ? (
     <a className={`button theme--${theme.mode}`} href={url}>
@@ -30,3 +30,5 @@ export const Button = ({ label, url, ...props }: ButtonProps): ReactElement => {
     </button>
   );
 };
+
+export default Button;
