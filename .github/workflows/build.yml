@@ -15,4 +15,5 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm run lint:css
+      - run: test-storybook
       - run: npm run build:storybook
