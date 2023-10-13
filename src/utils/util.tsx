@@ -33,6 +33,7 @@ export function formatText(text: string, customClass: string | undefined = undef
   return (
     <span
       className={customClass}
+      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
         __html: sanitizeText(text)
       }}

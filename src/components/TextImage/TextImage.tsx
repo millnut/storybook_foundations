@@ -18,7 +18,7 @@ export interface TextImageProps {
   image: ImageProps;
 }
 
-const TextImage = ({ title, body, image }: TextImageProps): ReactElement => {
+export default function TextImage({ title, body, image }: TextImageProps): ReactElement {
   const theme = useTheme();
   return (
     <section className={`text-image theme--${theme.mode}`}>
@@ -29,12 +29,10 @@ const TextImage = ({ title, body, image }: TextImageProps): ReactElement => {
       </div>
     </section>
   );
-};
+}
 
 TextImage.defaultProps = {
   title: 'Example title',
   body: 'Example body text',
   image: Image.defaultProps
 };
-
-export default TextImage;
