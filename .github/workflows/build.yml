@@ -1,4 +1,4 @@
-name: Build, typescript & eslint checks
+name: Build, typescript, eslint & stylelint checks
 
 on:
   pull_request:
