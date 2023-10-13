@@ -31,4 +31,10 @@ const TextImage = ({ title, body, image }: TextImageProps): ReactElement => {
   );
 };
 
+TextImage.defaultProps = {
+  title: 'Example title',
+  body: 'Example body text',
+  image: Image.defaultProps
+};
+
 export default TextImage;
