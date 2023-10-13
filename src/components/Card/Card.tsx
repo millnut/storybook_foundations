@@ -58,4 +58,10 @@ const Card = ({ image, title, body, url }: CardProps): ReactElement => {
   );
 };
 
+Card.defaultProps = {
+  title: 'Example title',
+  body: 'Example body text',
+  image: Image.defaultProps
+};
+
 export default Card;
