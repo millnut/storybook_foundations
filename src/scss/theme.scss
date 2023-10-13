@@ -1,13 +1,15 @@
-@import './colors.scss';
+@use 'sass:map';
+
+@import './colors';
 
 $themes: (
   light: (
-    backgroundColor: $white,
-    textColor: $black
+    background-color: $white,
+    text-color: $black
   ),
   dark: (
-    backgroundColor: $black,
-    textColor: $white
+    background-color: $black,
+    text-color: $white
   )
 );
 
@@ -15,7 +17,7 @@ $themes: (
   $array: $themes;
   $prefix: theme;
 
-  @if ($arg == theme) {
+  @if $arg == theme {
     $array: $themes;
     $prefix: theme;
   } @else {
@@ -27,8 +29,8 @@ $themes: (
     &.#{$prefix}--#{$theme} {
       $array-map: () !global;
       @each $key, $submap in $map {
-        $value: map-get(map-get($array, $theme), '#{$key}');
-        $array-map: map-merge(
+        $value: map.get(map.get($array, $theme), '#{$key}');
+        $array-map: map.merge(
           $array-map,
           (
             $key: $value
@@ -37,11 +39,12 @@ $themes: (
       }
 
       @content;
+
       $array-map: null !global;
     }
   }
 }
 
-@function getValue($key) {
-  @return map-get($array-map, $key);
+@function get-value($key) {
+  @return map.get($array-map, $key);
 }

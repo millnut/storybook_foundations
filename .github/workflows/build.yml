@@ -1,4 +1,4 @@
-name: Build, typescript & eslint checks
+name: Build, typescript, eslint & stylelint checks
 
 on:
   pull_request:
@@ -14,4 +14,5 @@ jobs:
           node-version: '18.18.0'
       - run: npm install
       - run: npm run lint
+      - run: npm run lint:css
       - run: npm run build:storybook

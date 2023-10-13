@@ -1,9 +1,9 @@
-@import '../../scss/lib.scss';
+@import '../../scss/lib';
 
 .text-image {
   @include customize(theme) {
-    background: getValue(backgroundColor);
-    color: getValue(textColor);
+    background: get-value(background-color);
+    color: get-value(text-color);
   }
 
   display: grid;

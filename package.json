@@ -45,6 +45,13 @@
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
     "storybook": "^7.4.6",
+    "stylelint": "^15.10.3",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-recommended-scss": "^13.0.0",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.0.0",
     "typescript": "^5.2.2",
     "uuidv4": "^6.2.13"
   },
@@ -64,6 +71,7 @@
     "build:storybook": "storybook build",
     "format": "prettier --cache --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
+    "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
@@ -71,6 +79,10 @@
     "src/**/*.{js,jsx,ts,tsx}": [
       "npm run format",
       "npm run lint"
+    ],
+    "src/**/*.{css,scss}": [
+      "npm run format",
+      "npm run lint:css"
     ]
   }
 }

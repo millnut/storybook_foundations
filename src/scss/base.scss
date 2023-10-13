@@ -1,4 +1,4 @@
-@import './lib.scss';
+@import './lib';
 
 html,
 body {
@@ -23,8 +23,8 @@ body {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -51,7 +51,6 @@ ul {
 button {
   border: 0;
   padding: 0;
-  -webkit-appearance: none;
   appearance: none;
   outline: none;
   background-color: transparent;
@@ -72,9 +71,6 @@ blockquote {
   margin: 0;
 }
 
-input {
-}
-
 figure {
   margin: 0;
 }
@@ -84,8 +80,5 @@ figure {
 }
 
 ::selection {
-  background: $theme-highlight;
-}
-::-moz-selection {
   background: $theme-highlight;
 }
