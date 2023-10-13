@@ -1,11 +1,12 @@
 @import '../../scss/lib';
 
 .card {
-  list-style: none;
   @include customize(theme) {
     background: get-value(background-color);
     color: get-value(text-color);
   }
+
+  list-style: none;
 
   &__container {
     display: flex;

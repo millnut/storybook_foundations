@@ -40,22 +40,22 @@ $cols: 12;
 
 @mixin container($width: $width) {
   max-width: $width;
-  margin: 0 auto;
   padding: 0 1rem;
+  margin: 0 auto;
   @media screen and (min-width: $sm) {
-    padding: 0 2rem;
     max-width: calc($width + 4rem);
+    padding: 0 2rem;
   }
   @media screen and (min-width: $lg) {
-    padding: 0 5rem;
     max-width: calc($width + 10rem);
+    padding: 0 5rem;
   }
 }
 
 @mixin grid($cols: $cols, $size: 1fr) {
   display: grid;
-  grid-template-columns: repeat($cols, $size);
   gap: rem(24px);
+  grid-template-columns: repeat($cols, $size);
 }
 
 /*************************
@@ -63,11 +63,11 @@ $cols: 12;
 *************************/
 @mixin sr-only {
   position: absolute;
-  left: -10000px;
   top: auto;
+  left: -10000px;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  overflow: hidden;
   font-size: 1rem;
 }
 

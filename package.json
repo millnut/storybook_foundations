@@ -46,6 +46,7 @@
     "sass-loader": "^13.3.2",
     "storybook": "^7.4.6",
     "stylelint": "^15.10.3",
+    "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-recommended": "^13.0.0",
     "stylelint-config-recommended-scss": "^13.0.0",
