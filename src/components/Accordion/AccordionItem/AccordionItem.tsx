@@ -12,9 +12,9 @@ export interface AccordionItemProps {
 }
 
 const AccordionItem = ({ summary, body }: AccordionItemProps): ReactElement => (
-  <details className="accordionItem">
-    <summary className="accordionItem__summary">{summary}</summary>
-    <p className="accordionItem__body">{body}</p>
+  <details className="accordion-item">
+    <summary className="accordion-item__summary">{summary}</summary>
+    <p className="accordion-item__body">{body}</p>
   </details>
 );
 
