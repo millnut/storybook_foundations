@@ -8,10 +8,6 @@ export interface ButtonProps {
    * Optional url
    */
   url?: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
 }
 
 /**
@@ -25,7 +21,7 @@ export default function Button({ url, label }: ButtonProps): ReactElement {
       {label}
     </a>
   ) : (
-    <button type="button" className={`button theme--${theme.mode}`} {...props}>
+    <button type="button" className={`button theme--${theme.mode}`}>
       {label}
     </button>
   );
