@@ -18,7 +18,7 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 
-const Button = ({ label, url, ...props }: ButtonProps): ReactElement => {
+export default function Button({ url, label }: ButtonProps): ReactElement {
   const theme = useTheme();
   return url ? (
     <a className={`button theme--${theme.mode}`} href={url}>
@@ -29,7 +29,7 @@ const Button = ({ label, url, ...props }: ButtonProps): ReactElement => {
       {label}
     </button>
   );
-};
+}
 
 Button.defaultProps = {
   label: 'Button',
@@ -38,5 +38,3 @@ Button.defaultProps = {
     url: '#'
   }
 };
-
-export default Button;

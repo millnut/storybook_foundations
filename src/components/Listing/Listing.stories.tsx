@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { v4 as uuidv4 } from 'uuid';
 import Listing from './Listing';
 import Card from '../Card/Card';
 
@@ -17,7 +18,7 @@ type Story = StoryObj<typeof Listing>;
 
 const cards = Array(12)
   .fill(null)
-  .map((_, index) => <Card key={index} {...Card.defaultProps} />);
+  .map(() => <Card key={uuidv4()} {...Card.defaultProps} />);
 
 export const Primary: Story = {
   args: {
