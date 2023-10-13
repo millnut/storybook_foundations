@@ -22,7 +22,7 @@ export interface CardProps {
   url?: string;
 }
 
-const Card = ({ image, title, body, url }: CardProps): ReactElement => {
+export default function Card({ image, title, body, url }: CardProps): ReactElement {
   const theme = useTheme();
 
   function handleClick(e: React.MouseEvent<HTMLElement>): void {
@@ -31,8 +31,8 @@ const Card = ({ image, title, body, url }: CardProps): ReactElement => {
       link.click();
     }
   }
-
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <li
       className={`card theme--${theme.mode}`}
       onClick={(event) => {
@@ -56,12 +56,10 @@ const Card = ({ image, title, body, url }: CardProps): ReactElement => {
       </span>
     </li>
   );
-};
+}
 
 Card.defaultProps = {
   title: 'Example title',
   body: 'Example body text',
   image: Image.defaultProps
 };
-
-export default Card;

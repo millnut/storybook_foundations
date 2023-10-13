@@ -33,18 +33,20 @@ export interface ImageProps {
   loadingAttr?: 'lazy' | 'eager' | undefined;
 }
 
-const Image = ({ src, size, width, height, altText, loadingAttr = 'lazy' }: ImageProps): ReactElement => (
-  <img
-    className="image"
-    srcSet={`${src.small}, ${src.medium}, ${src.default}`}
-    sizes={`${size?.small ?? 576}w, ${size?.medium ?? 992}w, ${size?.default ?? 1440}w`}
-    src={src.default}
-    width={width}
-    height={height}
-    alt={altText}
-    loading={loadingAttr}
-  />
-);
+export default function Image({ src, size, width, height, altText, loadingAttr = 'lazy' }: ImageProps): ReactElement {
+  return (
+    <img
+      className="image"
+      srcSet={`${src.small}, ${src.medium}, ${src.default}`}
+      sizes={`${size?.small ?? 576}w, ${size?.medium ?? 992}w, ${size?.default ?? 1440}w`}
+      src={src.default}
+      width={width}
+      height={height}
+      alt={altText}
+      loading={loadingAttr}
+    />
+  );
+}
 
 Image.defaultProps = {
   src: {
@@ -56,5 +58,3 @@ Image.defaultProps = {
   height: 500,
   altText: 'An example image'
 };
-
-export default Image;
