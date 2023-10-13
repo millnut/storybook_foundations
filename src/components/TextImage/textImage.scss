@@ -5,6 +5,7 @@
     background: getValue(backgroundColor);
     color: getValue(textColor);
   }
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: rem(10px);
