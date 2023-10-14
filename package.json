@@ -76,7 +76,7 @@
     "format": "prettier --cache --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
-    "test-storybook": "test-storybook -- --coverage --passWithNoTests",
+    "test-storybook": "test-storybook --coverage --maxWorkers=3 --passWithNoTests",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
