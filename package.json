@@ -78,8 +78,7 @@
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "test-storybook": "test-storybook -- --coverage --passWithNoTests",
     "prepare": "husky install",
-    "pre-commit": "lint-staged",
-    "chromatic": "npx chromatic --project-token chpt_b1245dcfc273964"
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
