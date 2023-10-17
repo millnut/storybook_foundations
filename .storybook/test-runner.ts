@@ -14,10 +14,10 @@ const a11yConfig: TestRunnerConfig = {
     await checkA11y(page, '#storybook-root', {
       detailedReport: true,
       detailedReportOptions: {
-        html: true,
-      },
+        html: true
+      }
     });
-  },
+  }
 };
 
 module.exports = a11yConfig;
