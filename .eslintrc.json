@@ -76,6 +76,8 @@
       }
     ],
     "react/require-default-props": [0],
-    "react/default-props-match-prop-types": [0]
+    "react/default-props-match-prop-types": [0],
+    // This is disabled due to issues it has. We should re-enable when fixed.
+    "import/no-import-module-exports": "off"
   }
 }
