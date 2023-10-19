@@ -13,11 +13,11 @@
     "@babel/preset-typescript": "^7.23.0",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "@storybook/addon-a11y": "^7.4.6",
+    "@storybook/addon-a11y": "^7.5.0",
     "@storybook/addon-coverage": "^0.0.9",
-    "@storybook/addon-essentials": "^7.4.6",
-    "@storybook/addon-interactions": "^7.4.6",
-    "@storybook/addon-links": "^7.4.6",
+    "@storybook/addon-essentials": "^7.5.0",
+    "@storybook/addon-interactions": "^7.5.0",
+    "@storybook/addon-links": "^7.5.0",
     "@storybook/addon-styling-webpack": "^0.0.5",
     "@storybook/blocks": "^7.4.6",
     "@storybook/react": "^7.4.6",
@@ -37,9 +37,9 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-storybook": "^0.6.14",
+    "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.0",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^15.0.1",
     "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
     "react": "^18.2.0",
@@ -47,8 +47,8 @@
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
-    "storybook": "^7.4.6",
-    "stylelint": "^15.10.3",
+    "storybook": "^7.5.0",
+    "stylelint": "^15.11.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-recommended": "^13.0.0",
@@ -77,7 +77,7 @@
     "build-storybook": "storybook build",
     "format": "prettier --cache --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
-    "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
+    "lint-css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "test-storybook": "test-storybook --coverage --maxWorkers=3",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
@@ -89,7 +89,7 @@
     ],
     "src/**/*.{css,scss}": [
       "npm run format",
-      "npm run lint:css"
+      "npm run lint-css"
     ]
   },
   "bugs": {
