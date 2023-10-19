@@ -44,6 +44,6 @@ jobs:
       - name: Run ESLint
         run: npm run lint
       - name: Run Stylelint
-        run: npm run lint:css
+        run: npm run lint-css
       - name: Build Storybook
         run: npm run build-storybook
