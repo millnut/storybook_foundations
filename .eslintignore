@@ -1,7 +1,8 @@
-!.storybook
+.storybook
 /node_modules/
 /storybook/
 /storybook-static/
 /dist/
 /public/
 /coverage/
+rollup.config.js
