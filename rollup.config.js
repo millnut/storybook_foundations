@@ -32,7 +32,7 @@ export default [
       resolve({ preferBuiltins: true }),
       commonjs(),
       typescript({
-        useTsconfigDeclarationDir: true,
+        tsconfig: 'tsconfig.esm.json',
         tsconfigOverride: {
           exclude: ['.storybook', 'src/documentation', 'src/pages']
         }
