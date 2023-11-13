@@ -79,6 +79,6 @@
     "react/default-props-match-prop-types": [0],
     // This is disabled due to issues it has. We should re-enable when fixed.
     "import/no-import-module-exports": "off",
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }
