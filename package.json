@@ -5,7 +5,13 @@
     "type": "git",
     "url": "git+https://github.com/millnut/storybook_foundations.git"
   },
-  "main": "index.js",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "license": "",
   "devDependencies": {
     "@babel/preset-env": "^7.22.20",
@@ -13,6 +19,10 @@
     "@babel/preset-typescript": "^7.23.0",
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "@storybook/addon-a11y": "^7.5.3",
     "@storybook/addon-coverage": "^0.0.9",
     "@storybook/addon-essentials": "^7.5.3",
@@ -45,6 +55,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "resolve-url-loader": "^5.0.0",
+    "rollup": "^4.4.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-scss": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
     "storybook": "^7.5.3",
@@ -85,7 +101,8 @@
     "lint-css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "test-storybook": "test-storybook --coverage --maxWorkers=3",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "build-package": "rollup -c --bundleConfigAsCjs"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
