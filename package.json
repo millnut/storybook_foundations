@@ -24,7 +24,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@storybook/addon-a11y": "^7.5.3",
-    "@storybook/addon-coverage": "^0.0.9",
+    "@storybook/addon-coverage": "^1.0.0",
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
@@ -89,6 +89,9 @@
     "uuid": "^9.0.1"
   },
   "overrides": {
+    "@storybook/test-runner": {
+      "wait-on": "^7.2.0"
+    },
     "stylelint-config-idiomatic-order": {
       "stylelint": "^15.11.0"
     }
