@@ -64,6 +64,22 @@ const config: StorybookConfig = {
   },
   core: {
     disableTelemetry: true
+  },
+  webpackFinal: async (config) => {
+    config.resolve = config.resolve ?? {};
+
+    // webpack < 5 used to include polyfills for node.js core modules by default.
+    // Prevent ModuleNotFoundError for this dependency.
+    config.resolve.fallback = {
+      fs: false,
+      path: false,
+      url: false,
+      module: false,
+      assert: false,
+      perf_hooks: false,
+    };
+
+    return config;
   }
 };
 export default config;
