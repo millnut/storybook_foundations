@@ -89,7 +89,9 @@
     "uuid": "^9.0.1"
   },
   "overrides": {
-    "open": "^9.1.0"
+    "stylelint-config-sass-guidelines": {
+      "stylelint": "^16.0.2"
+    }
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
