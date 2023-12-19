@@ -3,7 +3,6 @@
     "stylelint-config-idiomatic-order",
     "stylelint-config-standard-scss",
     "stylelint-config-recommended-scss",
-    "stylelint-config-sass-guidelines",
     "stylelint-config-prettier-scss"
   ],
   "rules": {
