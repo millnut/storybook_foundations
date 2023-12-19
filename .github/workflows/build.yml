@@ -10,18 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
       - name: Cache npm dependencies
         uses: actions/cache@v3
         id: npm-cache
         with:
           path: |
             node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/bun.lockb') }}
           restore-keys: |
             ${{ runner.os }}-npm
       - name: Install dependencies if cache invalid
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: bun install
 
   # Build Storybook
   build:
@@ -29,23 +30,21 @@ jobs:
     needs: install-cache
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
+      - uses: oven-sh/setup-bun@v1
       - name: Restore npm dependencies
         uses: actions/cache@v3
         id: npm-cache
         with:
           path: |
             node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/bun.lockb') }}
           restore-keys: |
             ${{ runner.os }}-npm
       - name: Run ESLint
-        run: npm run lint
+        run: bun run lint
       - name: Run Stylelint
-        run: npm run lint-css
+        run: bun run lint-css
       - name: Build Storybook
-        run: npm run build-storybook
+        run: bun run build-storybook
       - name: Build Package
-        run: npm run build-package
+        run: bun run build-package

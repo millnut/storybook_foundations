@@ -52,12 +52,7 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: '@storybook/react-webpack5',
-    options: {
-      builder: {
-        fsCache: true,
-        lazyCompilation: true
-      }
-    }
+    options: {}
   },
   docs: {
     autodocs: 'tag'

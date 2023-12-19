@@ -10,18 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
       - name: Cache npm dependencies
         uses: actions/cache@v3
         id: npm-cache
         with:
           path: |
             node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/bun.lockb') }}
           restore-keys: |
             ${{ runner.os }}-npm
       - name: Install dependencies if cache invalid
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: bun install
 
   # Run interaction and accessibility tests
   interaction-and-accessibility:
@@ -30,27 +31,25 @@ jobs:
     needs: install-cache
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
+      - uses: oven-sh/setup-bun@v1
       - name: Restore npm dependencies
         uses: actions/cache@v3
         id: npm-cache
         with:
           path: |
             node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/bun.lockb') }}
           restore-keys: |
             ${{ runner.os }}-npm
       - name: Install Playwright
-        run: npx playwright install --with-deps
+        run: bunx playwright install --with-deps
       - name: Build Storybook
-        run: npm run build-storybook
+        run: bun run build-storybook
       - name: Serve Storybook and run tests
         run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on --timeout 5000 tcp:127.0.0.1:6006 && npm run test-storybook"
+          bunx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "bunx http-server storybook-static --port 6006 --silent" \
+            "bunx wait-on --timeout 5000 tcp:127.0.0.1:6006 && bun run test-storybook"
 
   # Run visual and composition tests with Chromatic
   visual-and-composition:
@@ -66,7 +65,7 @@ jobs:
         with:
           path: |
             node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/bun.lockb') }}
           restore-keys: |
             ${{ runner.os }}-npm
       - name: Publish to Chromatic

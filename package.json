@@ -50,6 +50,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.0",
     "lint-staged": "^15.0.1",
+    "open": "^9.1.0",
     "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
     "react": "^18.2.0",
@@ -89,9 +90,7 @@
     "uuid": "^9.0.1"
   },
   "overrides": {
-    "stylelint-config-sass-guidelines": {
-      "stylelint": "^16.0.2"
-    }
+    "open": "^9.0.0"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
@@ -106,12 +105,12 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run format",
-      "npm run lint"
+      "bun run format",
+      "bun run lint"
     ],
     "src/**/*.{css,scss}": [
-      "npm run format",
-      "npm run lint-css"
+      "bun run format",
+      "bun run lint-css"
     ]
   },
   "bugs": {

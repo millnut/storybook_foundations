@@ -18,11 +18,11 @@ This is a component library foundation built using Storybook 7 and SASS.
 ### Setting up the project locally
 
 1. Clone the repo from Github: `git clone git@github.com:millnut/storybook_foundations.git`
-2. Install NPM Node Modules by running `npm install` from the project root
+2. Install Node Modules by running `bun install` from the project root
 
 ## Working locally on the project
 
-Run `npm run storybook` from the project root. This will run a new instance of [Storybook](https://storybook.js.org/) that can be accessed from `localhost:6006`.
+Run `bun run storybook` from the project root. This will run a new instance of [Storybook](https://storybook.js.org/) that can be accessed from `localhost:6006`.
 
 Changes made locally are automatically compiled and the browser instance of Storybook will automaticaly refresh, hot-loading changes very quickly where possible.
 
