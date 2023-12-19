@@ -38,7 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "^10.4.16",
-    "chromatic": "^9.0.0",
+    "chromatic": "^10.0.0",
     "eslint": "^8.50.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -64,14 +64,14 @@
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
     "storybook": "^7.6.6",
-    "stylelint": "^15.11.0",
-    "stylelint-config-idiomatic-order": "^9.0.0",
+    "stylelint": "^16.0.2",
+    "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-prettier-scss": "^1.0.0",
-    "stylelint-config-recommended": "^13.0.0",
-    "stylelint-config-recommended-scss": "^13.0.0",
+    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-config-sass-guidelines": "^10.0.0",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-config-standard-scss": "^11.0.0",
+    "stylelint-config-standard": "^35.0.0",
+    "stylelint-config-standard-scss": "^12.0.0",
     "typescript": "^5.2.2",
     "uuidv4": "^6.2.13"
   },
@@ -89,8 +89,8 @@
     "uuid": "^9.0.1"
   },
   "overrides": {
-    "stylelint-config-idiomatic-order": {
-      "stylelint": "^15.11.0"
+    "stylelint-config-sass-guidelines": {
+      "stylelint": "^16.0.2"
     }
   },
   "scripts": {

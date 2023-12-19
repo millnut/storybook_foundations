@@ -76,7 +76,7 @@ const config: StorybookConfig = {
       url: false,
       module: false,
       assert: false,
-      perf_hooks: false,
+      perf_hooks: false
     };
 
     return config;
