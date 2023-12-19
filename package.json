@@ -106,12 +106,12 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run format",
-      "npm run lint"
+      "bun run format",
+      "bun run lint"
     ],
     "src/**/*.{css,scss}": [
-      "npm run format",
-      "npm run lint-css"
+      "bun run format",
+      "bun run lint-css"
     ]
   },
   "bugs": {
