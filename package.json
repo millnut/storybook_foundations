@@ -23,16 +23,16 @@
     "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
-    "@storybook/addon-a11y": "^7.5.3",
+    "@storybook/addon-a11y": "^7.6.6",
     "@storybook/addon-coverage": "^1.0.0",
-    "@storybook/addon-essentials": "^7.5.3",
-    "@storybook/addon-interactions": "^7.5.3",
-    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
     "@storybook/addon-styling-webpack": "^0.0.5",
-    "@storybook/blocks": "^7.5.3",
-    "@storybook/react": "^7.5.3",
-    "@storybook/react-webpack5": "^7.5.3",
-    "@storybook/test-runner": "^0.14.0",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-webpack5": "^7.6.6",
+    "@storybook/test-runner": "^0.16.0",
     "@types/react": "^18.2.0",
     "@types/sanitize-html": "^2.9.1",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
@@ -63,7 +63,7 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
-    "storybook": "^7.5.3",
+    "storybook": "^7.6.6",
     "stylelint": "^15.11.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-prettier-scss": "^1.0.0",
@@ -89,9 +89,6 @@
     "uuid": "^9.0.1"
   },
   "overrides": {
-    "@storybook/test-runner": {
-      "wait-on": "^7.2.0"
-    },
     "stylelint-config-idiomatic-order": {
       "stylelint": "^15.11.0"
     }
