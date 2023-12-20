@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import AccordionItem, { AccordionItemProps } from './AccordionItem/AccordionItem';
-import './accordion.scss';
+//import './accordion.scss';
 
 export interface AccordionProps {
   /**

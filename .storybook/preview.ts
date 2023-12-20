@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
 import { withPerformance } from 'storybook-addon-performance';
-import '../src/scss/base.scss';
+// import '../src/scss/base.scss';
 
 const customViewports = {
   mobile: {

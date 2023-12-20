@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import useTheme from '../../hooks/useDarkMode';
 import Image, { ImageProps } from '../Image/Image';
-import './Card.scss';
+//import './Card.scss';
 
 export interface CardProps {
   /**

@@ -12,7 +12,7 @@ const useTheme = (): UseThemeProps => {
       setMode(e.matches ? 'dark' : 'light');
     };
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', modeMe);
-    return window.matchMedia('(prefers-color-scheme: dark)').removeListener(modeMe);
+    return window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', modeMe);
   }, []);
   return { mode };
 };

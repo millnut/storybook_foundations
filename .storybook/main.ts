@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
+import StylexPlugin from '@stylexjs/webpack-plugin';
 
 const config: StorybookConfig = {
   features: {
@@ -11,54 +12,61 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
-    'storybook-addon-performance',
-    '@storybook/addon-coverage',
-    {
-      name: '@storybook/addon-styling-webpack',
-      options: {
-        rules: [
-          {
-            test: /\.s[ac]ss$/,
-            sideEffects: true,
-            use: [
-              require.resolve('style-loader'),
-              {
-                loader: require.resolve('css-loader'),
-                options: {
-                  importLoaders: 3
-                }
-              },
-              {
-                loader: require.resolve('postcss-loader'),
-                options: {
-                  implementation: require.resolve('postcss')
-                }
-              },
-              require.resolve('resolve-url-loader'),
-              {
-                loader: require.resolve('sass-loader'),
-                options: {
-                  // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
-                  implementation: require.resolve('sass'),
-                  sourceMap: true,
-                  sassOptions: {}
-                }
-              }
-            ]
-          }
-        ]
-      }
-    }
+    'storybook-addon-performance'
+    // {
+    //   name: '@storybook/addon-styling-webpack',
+    //   options: {
+    //     rules: [
+    //       {
+    //         test: /\.s[ac]ss$/,
+    //         sideEffects: true,
+    //         use: [
+    //           require.resolve('style-loader'),
+    //           {
+    //             loader: require.resolve('css-loader'),
+    //             options: {
+    //               importLoaders: 3
+    //             }
+    //           },
+    //           {
+    //             loader: require.resolve('postcss-loader'),
+    //             options: {
+    //               implementation: require.resolve('postcss')
+    //             }
+    //           },
+    //           require.resolve('resolve-url-loader'),
+    //           {
+    //             loader: require.resolve('sass-loader'),
+    //             options: {
+    //               // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
+    //               implementation: require.resolve('sass'),
+    //               sourceMap: true,
+    //               sassOptions: {}
+    //             }
+    //           }
+    //         ]
+    //       }
+    //     ]
+    //   }
+    // }
   ],
   framework: {
     name: '@storybook/react-webpack5',
     options: {
       builder: {
-        fsCache: true,
-        lazyCompilation: true
+        useSWC: false
       }
     }
   },
+  swc: (config, options) => ({
+    jsc: {
+      transform: {
+        react: {
+          runtime: 'automatic'
+        }
+      }
+    }
+  }),
   docs: {
     autodocs: 'tag'
   },
@@ -66,6 +74,9 @@ const config: StorybookConfig = {
     disableTelemetry: true
   },
   webpackFinal: async (config) => {
+    config.module = config.module || {};
+    config.module.rules = config.module.rules || [];
+
     config.resolve = config.resolve ?? {};
 
     // webpack < 5 used to include polyfills for node.js core modules by default.
@@ -78,6 +89,24 @@ const config: StorybookConfig = {
       assert: false,
       perf_hooks: false
     };
+
+    config.plugins = config.plugins || [];
+    config.plugins.push(
+      new StylexPlugin({
+        filename: 'styles.css',
+        // get webpack mode and set value for dev
+        dev: config.mode === 'development',
+        // Required for CSS variable support
+        appendTo: 'head',
+        unstable_moduleResolution: {
+          // The module system to be used.
+          // Use this value when using `ESModules`.
+          type: 'commonJS',
+          // The absolute path to the root directory of your project.
+          rootDir: __dirname
+        }
+      })
+    );
 
     return config;
   }

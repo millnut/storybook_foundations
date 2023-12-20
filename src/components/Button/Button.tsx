@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import useTheme from '../../hooks/useDarkMode';
-import './button.scss';
+import * as stylex from '@stylexjs/stylex';
+import { styles } from './Button.stylex';
 
 export interface ButtonProps {
   label: string;
@@ -15,13 +15,12 @@ export interface ButtonProps {
  */
 
 export default function Button({ url, label }: ButtonProps): ReactElement {
-  const theme = useTheme();
   return url ? (
-    <a className={`button theme--${theme.mode}`} href={url}>
+    <a {...stylex.props(styles.base, styles.link)} href={url}>
       {label}
     </a>
   ) : (
-    <button type="button" className={`button theme--${theme.mode}`}>
+    <button type="button" {...stylex.props(styles.base, styles.button)}>
       {label}
     </button>
   );

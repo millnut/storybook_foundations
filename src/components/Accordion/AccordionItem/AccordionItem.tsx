@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import './accordionItem.scss';
+//import './accordionItem.scss';
 
 export interface AccordionItemProps {
   /**

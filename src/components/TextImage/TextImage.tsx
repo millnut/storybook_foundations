@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import useTheme from '../../hooks/useDarkMode';
 import Image, { ImageProps } from '../Image/Image';
-import './textImage.scss';
+//import './textImage.scss';
 
 export interface TextImageProps {
   /**
