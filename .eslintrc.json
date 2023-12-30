@@ -80,6 +80,7 @@
     // This is disabled due to issues it has. We should re-enable when fixed.
     "import/no-import-module-exports": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "@stylexjs/valid-styles": "error"
+    "@stylexjs/valid-styles": "error",
+    "react/jsx-no-useless-fragment": [2, { "allowExpressions": true }]
   }
 }
