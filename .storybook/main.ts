@@ -12,50 +12,53 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
     'storybook-addon-performance',
-    '@storybook/addon-coverage',
-    {
-      name: '@storybook/addon-styling-webpack',
-      options: {
-        rules: [
-          {
-            test: /\.s[ac]ss$/,
-            sideEffects: true,
-            use: [
-              require.resolve('style-loader'),
-              {
-                loader: require.resolve('css-loader'),
-                options: {
-                  importLoaders: 3
-                }
-              },
-              {
-                loader: require.resolve('postcss-loader'),
-                options: {
-                  implementation: require.resolve('postcss')
-                }
-              },
-              require.resolve('resolve-url-loader'),
-              {
-                loader: require.resolve('sass-loader'),
-                options: {
-                  // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
-                  implementation: require.resolve('sass'),
-                  sourceMap: true,
-                  sassOptions: {}
-                }
-              }
-            ]
-          }
-        ]
-      }
-    }
+    // FIXME: addon-coverage has issues with useSWC: true
+    //'@storybook/addon-coverage',
+    // {
+    //   name: '@storybook/addon-styling-webpack',
+    //   options: {
+    //     rules: [
+    //       {
+    //         test: /\.s[ac]ss$/,
+    //         sideEffects: true,
+    //         use: [
+    //           require.resolve('style-loader'),
+    //           {
+    //             loader: require.resolve('css-loader'),
+    //             options: {
+    //               importLoaders: 3
+    //             }
+    //           },
+    //           {
+    //             loader: require.resolve('postcss-loader'),
+    //             options: {
+    //               implementation: require.resolve('postcss')
+    //             }
+    //           },
+    //           require.resolve('resolve-url-loader'),
+    //           {
+    //             loader: require.resolve('sass-loader'),
+    //             options: {
+    //               // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
+    //               implementation: require.resolve('sass'),
+    //               sourceMap: true,
+    //               sassOptions: {}
+    //             }
+    //           }
+    //         ]
+    //       }
+    //     ]
+    //   }
+    // }
   ],
+  typescript: {
+    reactDocgen: 'react-docgen',
+  },
   framework: {
     name: '@storybook/react-webpack5',
     options: {
       builder: {
-        fsCache: true,
-        lazyCompilation: true
+        useSWC: true
       }
     }
   },

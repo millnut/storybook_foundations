@@ -21,7 +21,7 @@ jobs:
             ${{ runner.os }}-npm
       - name: Install dependencies if cache invalid
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
 
   # Run interaction and accessibility tests
   interaction-and-accessibility:
@@ -45,7 +45,7 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Build Storybook
-        run: npm run build-storybook
+        run: npx storybook build --test
       - name: Serve Storybook and run tests
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \

@@ -21,7 +21,7 @@ jobs:
             ${{ runner.os }}-npm
       - name: Install dependencies if cache invalid
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
 
   # Build Storybook
   build:
@@ -46,6 +46,6 @@ jobs:
       - name: Run Stylelint
         run: npm run lint-css
       - name: Build Storybook
-        run: npm run build-storybook
+        run: npx storybook build --test
       - name: Build Package
         run: npm run build-package
