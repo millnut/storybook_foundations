@@ -12,7 +12,7 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
     // FIXME: addon-coverage has issues with useSWC: true
-    // '@storybook/addon-coverage',
+    '@storybook/addon-coverage',
     {
       name: '@storybook/addon-styling-webpack',
       options: {
@@ -58,7 +58,7 @@ const config: StorybookConfig = {
     name: '@storybook/react-webpack5',
     options: {
       builder: {
-        useSWC: true
+        useSWC: false
       }
     }
   },
