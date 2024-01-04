@@ -46,6 +46,6 @@ jobs:
       - name: Run Stylelint
         run: npm run lint-css
       - name: Build Storybook
-        run: npx storybook build --test
+        run: npm run build-storybook
       - name: Build Package
         run: npm run build-package
