@@ -11,7 +11,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
-    'storybook-addon-performance',
+    // FIXME: addon-coverage has issues with useSWC: true
     '@storybook/addon-coverage',
     {
       name: '@storybook/addon-styling-webpack',
@@ -48,14 +48,17 @@ const config: StorybookConfig = {
           }
         ]
       }
-    }
+    },
+    'storybook-addon-performance'
   ],
+  typescript: {
+    reactDocgen: 'react-docgen'
+  },
   framework: {
     name: '@storybook/react-webpack5',
     options: {
       builder: {
-        fsCache: true,
-        lazyCompilation: true
+        useSWC: false
       }
     }
   },
