@@ -128,3 +128,8 @@ storybook-static/
 # Mac DS_Store files
 .DS_Store
 **/.DS_Store
+
+# IDE
+.vscode
+.vs
+.ide
