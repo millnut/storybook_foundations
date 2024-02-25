@@ -57,9 +57,3 @@ export default function Card({ image, title, body, url }: CardProps): ReactEleme
     </li>
   );
 }
-
-Card.defaultProps = {
-  title: 'Example title',
-  body: 'Example body text',
-  image: Image.defaultProps
-};

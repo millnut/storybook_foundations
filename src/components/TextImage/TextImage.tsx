@@ -30,9 +30,3 @@ export default function TextImage({ title, body, image }: TextImageProps): React
     </section>
   );
 }
-
-TextImage.defaultProps = {
-  title: 'Example title',
-  body: 'Example body text',
-  image: Image.defaultProps
-};

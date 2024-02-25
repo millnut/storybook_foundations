@@ -15,8 +15,3 @@ export default function Video({ videoSrc, posterImage }: VideoProps): ReactEleme
     </video>
   );
 }
-
-Video.defaultProps = {
-  videoSrc: 'myVideo.mp4',
-  posterImage: ''
-};

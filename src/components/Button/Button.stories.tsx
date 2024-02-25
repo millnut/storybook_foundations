@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const PrimaryButton: Story = {
   args: {
-    ...Button.defaultProps
+    label: 'Button'
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -26,6 +26,7 @@ export const PrimaryButton: Story = {
 
 export const ButtonLink: Story = {
   args: {
-    ...Button.defaultProps.buttonlinkprops
+    label: 'Button',
+    url: '#'
   }
 };
