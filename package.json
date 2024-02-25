@@ -14,17 +14,12 @@
   ],
   "license": "",
   "devDependencies": {
-    "@babel/preset-env": "^7.22.20",
-    "@babel/preset-react": "^7.22.15",
-    "@babel/preset-typescript": "^7.23.0",
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-image": "^3.0.3",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@parcel/packager-ts": "^2.11.0",
+    "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/transformer-typescript-types": "^2.11.0",
     "@storybook/addon-a11y": "^7.6.17",
-    "@storybook/addon-coverage": "^1.0.0",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
@@ -53,17 +48,13 @@
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.0.0",
     "lint-staged": "^15.0.1",
+    "only-allow": "^1.2.1",
+    "parcel": "^2.11.0",
     "postcss": "^8.4.31",
     "postcss-loader": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "resolve-url-loader": "^5.0.0",
-    "rollup": "^4.4.0",
-    "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-scss": "^4.0.0",
-    "rollup-plugin-typescript2": "^0.36.0",
     "sass": "^1.68.0",
     "sass-loader": "^14.1.1",
     "storybook": "^7.6.17",
@@ -99,10 +90,11 @@
     "format": "prettier --cache --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
     "lint": "tsc && eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
     "lint-css": "stylelint --allow-empty-input '**/*.{css,scss}'",
-    "test-storybook": "test-storybook --coverage --maxWorkers=3",
+    "test-storybook": "test-storybook --maxWorkers=3",
     "prepare": "husky",
+    "preinstall": "npx only-allow npm",
     "pre-commit": "lint-staged",
-    "build-package": "rollup -c --bundleConfigAsCjs"
+    "build-package": "parcel build"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
@@ -113,11 +105,5 @@
       "npm run format",
       "npm run lint-css"
     ]
-  },
-  "bugs": {
-    "url": "https://github.com/millnut/storybook_foundations/issues"
-  },
-  "readme": "ERROR: No README data found!",
-  "homepage": "https://github.com/millnut/storybook_foundations#readme",
-  "_id": "@millnut/storybook-foundations@0.0.1"
+  }
 }
