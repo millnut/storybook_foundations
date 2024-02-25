@@ -10,8 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: "use node ${{ env.node_version }}"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "${{ env.node_version }}"
       - name: Cache npm dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: npm-cache
         with:
           path: |
@@ -29,11 +34,13 @@ jobs:
     needs: install-cache
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - name: "use node ${{ env.node_version }}"
+        uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
+          node-version: "${{ env.node_version }}"
       - name: Restore npm dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: npm-cache
         with:
           path: |
