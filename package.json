@@ -36,8 +36,8 @@
     "@storybook/test-runner": "^0.16.0",
     "@types/react": "^18.2.0",
     "@types/sanitize-html": "^2.9.1",
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.7.4",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
     "autoprefixer": "^10.4.16",
     "chromatic": "^11.0.0",
     "css-loader": "^6.8.1",
@@ -90,8 +90,9 @@
     "uuid": "^9.0.1"
   },
   "overrides": {
-    "stylelint-config-sass-guidelines": {
-      "stylelint": "^16.0.2"
+    "eslint-config-airbnb-typescript": {
+      "@typescript-eslint/eslint-plugin": "^7.0.1",
+      "@typescript-eslint/parser": "^7.0.1"
     }
   },
   "scripts": {
