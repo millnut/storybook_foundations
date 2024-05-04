@@ -2,10 +2,7 @@ import type { StorybookConfig } from '@storybook/react-webpack5';
 import { storybookAddonStylingWebpackConfig } from './addon-styling-webpack-config';
 
 const config: StorybookConfig = {
-  features: {
-    storyStoreV7: true
-  },
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   staticDirs: ['../static'],
   addons: [
     '@storybook/addon-links',
@@ -16,17 +13,12 @@ const config: StorybookConfig = {
       name: '@storybook/addon-styling-webpack',
       options: storybookAddonStylingWebpackConfig
     },
-    'storybook-addon-performance'
+    '@storybook/addon-webpack5-compiler-swc'
   ],
-  typescript: {
-    reactDocgen: 'react-docgen'
-  },
   framework: {
     name: '@storybook/react-webpack5',
     options: {
-      builder: {
-        useSWC: true
-      }
+      builder: {}
     }
   },
   docs: {

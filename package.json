@@ -19,16 +19,17 @@
     "@parcel/packager-ts": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",
     "@parcel/transformer-typescript-types": "^2.11.0",
-    "@storybook/addon-a11y": "^7.6.17",
-    "@storybook/addon-essentials": "^7.6.17",
-    "@storybook/addon-interactions": "^7.6.17",
-    "@storybook/addon-links": "^7.6.17",
-    "@storybook/addon-styling-webpack": "^0.0.6",
-    "@storybook/blocks": "^7.6.17",
-    "@storybook/react": "^7.6.17",
-    "@storybook/react-webpack5": "^7.6.17",
-    "@storybook/test": "^7.6.17",
-    "@storybook/test-runner": "^0.16.0",
+    "@storybook/addon-a11y": "^8.0.9",
+    "@storybook/addon-essentials": "^8.0.9",
+    "@storybook/addon-interactions": "^8.0.9",
+    "@storybook/addon-links": "^8.0.9",
+    "@storybook/addon-styling-webpack": "^1.0.0",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
+    "@storybook/blocks": "^8.0.9",
+    "@storybook/react": "^8.0.9",
+    "@storybook/react-webpack5": "^8.0.9",
+    "@storybook/test": "^8.0.9",
+    "@storybook/test-runner": "^0.17.0",
     "@types/react": "^18.2.0",
     "@types/sanitize-html": "^2.9.1",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
@@ -57,8 +58,7 @@
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.68.0",
     "sass-loader": "^14.1.1",
-    "storybook": "^7.6.17",
-    "storybook-addon-performance": "^0.17.3",
+    "storybook": "^8.0.9",
     "style-loader": "^3.3.3",
     "stylelint": "^16.0.2",
     "stylelint-config-idiomatic-order": "^10.0.0",
@@ -77,12 +77,6 @@
   "dependencies": {
     "clsx": "^2.0.0",
     "sanitize-html": "^2.11.0"
-  },
-  "overrides": {
-    "eslint-config-airbnb-typescript": {
-      "@typescript-eslint/eslint-plugin": "^7.0.1",
-      "@typescript-eslint/parser": "^7.0.1"
-    }
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
