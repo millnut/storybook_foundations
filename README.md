@@ -1,6 +1,6 @@
-# Storybook 7 Component Library
+# Storybook 8 Component Library
 
-This is a component library foundation built using Storybook 7 and SASS.
+This is a component library foundation built using Storybook 8 and SASS.
 
 ## Contents
 
