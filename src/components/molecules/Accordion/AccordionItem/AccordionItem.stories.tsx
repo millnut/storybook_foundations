@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AccordionItem from '.';
 
 const meta = {
-  title: 'Example/AccordionItem',
+  title: 'Molecules/AccordionItem',
   component: AccordionItem,
   parameters: {
     layout: 'centered'
