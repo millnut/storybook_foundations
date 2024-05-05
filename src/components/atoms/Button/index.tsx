@@ -1,23 +1,24 @@
 import clsx from 'clsx';
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import styles from './Button.module.scss';
 
 export interface ButtonProps {
-  label: string;
+  children?: ReactNode;
   /**
    * Optional url
    */
   url?: string;
+  onClick?: () => void;
 }
 
-export default function Button({ url, label }: ButtonProps): ReactElement {
+export default function Button({ url, children, onClick }: ButtonProps): ReactElement {
   return url ? (
     <a className={clsx(styles.button, styles.primary)} href={url}>
-      {label}
+      {children}
     </a>
   ) : (
-    <button type="button" className={clsx(styles.button, styles.primary)}>
-      {label}
+    <button type="button" className={clsx(styles.button, styles.primary)} onClick={onClick}>
+      {children}
     </button>
   );
 }

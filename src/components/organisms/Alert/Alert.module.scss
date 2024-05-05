@@ -1,0 +1,25 @@
+.base {
+  padding: 16px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #0b0c0c;
+  margin: calc(1rem * 1.5);
+  color: #fff;
+}
+
+.announcement {
+  background-color: #048a04;
+}
+
+.minor {
+  background-color: #ffe146;
+  color: #121212;
+}
+
+.major {
+  background-color: #e4251b;
+}
+
+.notable-person {
+  background-color: #0b0c0c;
+}
