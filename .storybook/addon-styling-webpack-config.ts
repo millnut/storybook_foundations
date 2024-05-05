@@ -14,8 +14,8 @@ export const storybookAddonStylingWebpackConfig = {
             importLoaders: 3,
             modules: {
               exportLocalsConvention: 'as-is',
-              namedExport: false,
-            },
+              namedExport: false
+            }
           }
         },
         {

@@ -39,9 +39,9 @@ const preview: Preview = {
     viewport: { viewports: customViewports },
     options: {
       storySort: {
-        order: ["Foundations", "Atoms", "Molecules", "Organisms", "Pages"],
-      },
-    },
+        order: ['Foundations', 'Atoms', 'Molecules', 'Organisms', 'Pages']
+      }
+    }
   }
 };
 

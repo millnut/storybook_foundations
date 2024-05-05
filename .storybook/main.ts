@@ -3,7 +3,7 @@ import { storybookAddonStylingWebpackConfig } from './addon-styling-webpack-conf
 import path from 'path';
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   staticDirs: ['../static'],
   addons: [
     '@storybook/addon-webpack5-compiler-swc',
@@ -14,10 +14,10 @@ const config: StorybookConfig = {
     {
       name: '@storybook/addon-styling-webpack',
       options: storybookAddonStylingWebpackConfig
-    },
+    }
   ],
   typescript: {
-    reactDocgen: "react-docgen",
+    reactDocgen: 'react-docgen'
   },
   framework: {
     name: '@storybook/react-webpack5',

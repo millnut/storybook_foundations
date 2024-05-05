@@ -20,6 +20,6 @@
     "noEmit": true,
     "jsx": "react",
     "typeRoots": ["node_modules/@types", "src/types"],
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   }
 }
