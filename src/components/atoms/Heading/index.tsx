@@ -17,10 +17,6 @@ export interface HeadingProps {
   children: React.ReactNode;
 }
 
-/**
- * Primary UI component for user interaction
- */
-
 export default function Heading({ level, styledAsLevel, children }: HeadingProps): ReactElement {
   return (
     <>

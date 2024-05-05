@@ -10,10 +10,6 @@ export interface ButtonProps {
   url?: string;
 }
 
-/**
- * Primary UI component for user interaction
- */
-
 export default function Button({ url, label }: ButtonProps): ReactElement {
   return url ? (
     <a className={clsx(styles.button, styles.primary)} href={url}>
