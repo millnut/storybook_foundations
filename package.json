@@ -42,6 +42,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-css-modules": "^2.12.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
@@ -68,7 +69,8 @@
     "stylelint-config-sass-guidelines": "^11.0.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "typescript-plugin-css-modules": "^5.1.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -84,6 +86,7 @@
     "format": "prettier --cache --write './**/*.{ts,tsx,scss,css,json,md,mdx}'",
     "lint": "tsc && eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0",
     "lint-css": "stylelint --allow-empty-input '**/*.{css,scss}'",
+    "lint-css:fix": "stylelint --fix --allow-empty-input '**/*.{css,scss}'",
     "test-storybook": "test-storybook --maxWorkers=3",
     "prepare": "husky",
     "preinstall": "npx only-allow npm",
