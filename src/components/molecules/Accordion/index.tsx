@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import AccordionItem, { AccordionItemProps } from './AccordionItem';
+import AccordionItem, { AccordionItemProps } from '../AccordionItem';
 import styles from './Accordion.module.scss';
 
 export interface AccordionProps {
