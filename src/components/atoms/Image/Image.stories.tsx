@@ -16,9 +16,9 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     src: {
-      small: 'https://picsum.photos/600/600',
-      medium: 'https://picsum.photos/1200/1200',
-      default: 'https://picsum.photos/2400/2400'
+      small: 'https://placeholder.pics/svg/576x576',
+      medium: 'https://placeholder.pics/svg/992x992',
+      default: 'https://placeholder.pics/svg/1440x1440'
     },
     width: 500,
     height: 500,
