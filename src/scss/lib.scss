@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-@import './theme';
 @import './fonts';
 @import './colors';
 
@@ -69,14 +68,6 @@ $cols: 12;
   width: 1px;
   height: 1px;
   font-size: 1rem;
-}
-
-/*************************
-** Theme **
-*************************/
-@mixin theme($background, $color) {
-  background-color: $background;
-  color: $color;
 }
 
 /*************************

@@ -1,0 +1,15 @@
+@import '../../../scss/lib';
+
+.card {
+  list-style: none;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: rem(10px) rem(20px);
+  }
+
+  &__body {
+    margin-top: rem(10px);
+  }
+}

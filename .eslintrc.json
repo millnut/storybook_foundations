@@ -26,7 +26,8 @@
       "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:css-modules/recommended"
       ],
       "parserOptions": {
         "project": ["./tsconfig.json"]
@@ -38,7 +39,7 @@
       "version": "detect"
     }
   },
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier", "import"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier", "import", "css-modules"],
   "rules": {
     "semi": 0,
     "comma-dangle": 0,

@@ -1,6 +1,6 @@
 # Storybook 8 Component Library
 
-This is a component library foundation built using Storybook 8 and SASS.
+This is a component library foundation built using Storybook 8, SASS and CSS Modules.
 
 ## Contents
 
@@ -40,9 +40,9 @@ Within the component folder you must create the following 3 files:
 
 ```
 ComponentName
- |_ {ComponentName}.tsx
+ |_ index.tsx
  |_ {ComponentName}.stories.ts
- |_ {componentName}.scss
+ |_ {ComponentName}.module.scss
 ```
 
 #### {ComponentName}.tsx

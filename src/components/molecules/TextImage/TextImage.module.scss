@@ -1,0 +1,7 @@
+@import '../../../scss/lib';
+
+.text-image {
+  display: grid;
+  column-gap: rem(10px);
+  grid-template-columns: 1fr 1fr;
+}

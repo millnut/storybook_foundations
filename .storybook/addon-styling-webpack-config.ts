@@ -11,7 +11,11 @@ export const storybookAddonStylingWebpackConfig = {
         {
           loader: require.resolve('css-loader'),
           options: {
-            importLoaders: 3
+            importLoaders: 3,
+            modules: {
+              exportLocalsConvention: 'as-is',
+              namedExport: false,
+            },
           }
         },
         {
