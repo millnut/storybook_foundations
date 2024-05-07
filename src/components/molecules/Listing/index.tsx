@@ -1,4 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react';
+
 import styles from './Listing.module.scss';
 
 export interface ListingProps {

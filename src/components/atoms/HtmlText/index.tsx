@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react';
-import styles from './HtmlText.module.scss';
+
 import { sanitizeText } from '../../../utils/util';
+
+import styles from './HtmlText.module.scss';
 
 type HtmlTextProps = {
   body: string;

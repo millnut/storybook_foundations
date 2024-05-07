@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+
 import styles from './Video.module.scss';
 
 export interface VideoProps {

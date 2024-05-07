@@ -1,5 +1,6 @@
-import clsx from 'clsx';
 import React, { ReactElement } from 'react';
+import clsx from 'clsx';
+
 import styles from './Heading.module.scss';
 
 export interface HeadingProps {

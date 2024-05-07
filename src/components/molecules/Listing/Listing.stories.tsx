@@ -1,7 +1,10 @@
 import React from 'react';
+
 import type { Meta, StoryObj } from '@storybook/react';
-import Listing from '.';
+
 import Card from '../Card';
+
+import Listing from '.';
 
 const meta = {
   title: 'Molecules/Listing',

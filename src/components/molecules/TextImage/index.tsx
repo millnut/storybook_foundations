@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react';
+
 import Image, { ImageProps } from '../../atoms/Image';
+
 import styles from './TextImage.module.scss';
 
 export interface TextImageProps {

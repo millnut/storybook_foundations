@@ -31,6 +31,29 @@
       ],
       "parserOptions": {
         "project": ["./tsconfig.json"]
+      },
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              // `react` first, `next` second, then packages starting with a character
+              ["^react$", "^next", "^[a-z]"],
+              // Packages starting with `@`
+              ["^@"],
+              // Packages starting with `~`
+              ["^~"],
+              // Imports starting with `../`
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              // Imports starting with `./`
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+              // Style imports
+              ["^.+\\.s?css$"],
+              // Side effect imports
+              ["^\\u0000"]
+            ]
+          }
+        ]
       }
     }
   ],
@@ -39,7 +62,7 @@
       "version": "detect"
     }
   },
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier", "import", "css-modules"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier", "import", "css-modules", "simple-import-sort"],
   "rules": {
     "semi": 0,
     "comma-dangle": 0,
@@ -80,6 +103,8 @@
     "react/default-props-match-prop-types": [0],
     // This is disabled due to issues it has. We should re-enable when fixed.
     "import/no-import-module-exports": "off",
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
   }
 }

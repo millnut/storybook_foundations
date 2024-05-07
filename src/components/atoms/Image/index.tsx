@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+
 import styles from './Image.module.scss';
 
 export interface ImageProps {

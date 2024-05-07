@@ -1,4 +1,5 @@
-import React, { ReactNode, ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
+
 import styles from './Text.module.scss';
 
 type TextProps = {

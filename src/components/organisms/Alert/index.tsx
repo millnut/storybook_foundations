@@ -1,10 +1,12 @@
-import clsx from 'clsx';
 import React, { ReactElement, useEffect, useState } from 'react';
+import clsx from 'clsx';
+
+import Button from '../../atoms/Button';
+import Heading from '../../atoms/Heading';
+import Text from '../../atoms/Text';
+
 // eslint-disable-next-line css-modules/no-unused-class
 import styles from './Alert.module.scss';
-import Heading from '../../atoms/Heading';
-import Button from '../../atoms/Button';
-import Text from '../../atoms/Text';
 
 export interface AlertProps {
   /**
