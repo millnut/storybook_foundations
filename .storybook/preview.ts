@@ -42,7 +42,9 @@ const preview: Preview = {
         order: ['Foundations', 'Atoms', 'Molecules', 'Organisms', 'Pages']
       }
     }
-  }
+  },
+
+  tags: ['autodocs']
 };
 
 export default preview;
