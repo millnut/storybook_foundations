@@ -1,0 +1,43 @@
+/* Normalize */
+@import 'modern-normalize/modern-normalize.css';
+
+/* Animations */
+@import './animations';
+@import './transitions';
+
+/* Breakpoints */
+@import './breakpoints';
+
+/* Layout */
+@import './layout';
+
+/* Opacities */
+@import './opacities';
+
+/* Radius */
+@import './radius';
+
+/* Shadows */
+@import './shadows';
+
+/* Spacings */
+@import './spacings';
+
+/* Typography */
+@import './typography';
+
+/* Z Indexes */
+@import './z-indexes';
+
+/* Utils */
+@import './lib';
+
+/* Colors */
+/* stylelint-disable */
+:global {
+  @import './base-colors';
+  @import './themes/default';
+  @import './themes/core-light';
+  @import './themes/core-dark';
+}
+/* stylelint-enable */

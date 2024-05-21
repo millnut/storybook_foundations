@@ -2,6 +2,6 @@
 
 .text-image {
   display: grid;
-  column-gap: rem(10px);
+  column-gap: 0.625rem;
   grid-template-columns: 1fr 1fr;
 }

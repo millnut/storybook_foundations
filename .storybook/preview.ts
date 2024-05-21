@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import '../src/scss/base.scss';
+import '../src/scss/index.scss';
 
 const customViewports = {
   mobile: {

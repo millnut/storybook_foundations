@@ -1,3 +1,5 @@
+import React from 'react';
+
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
 
@@ -15,15 +17,38 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const PrimaryButton: Story = {
+export const Default: Story = {
+  args: {
+    children: 'Button'
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await expect(canvas.getByRole('button')).toBeInTheDocument();
   }
 };
 
-export const ButtonLink: Story = {
+export const Light: Story = {
   args: {
-    url: '#'
-  }
+    children: 'Button'
+  },
+  decorators: [
+    (Story) => (
+      <div className="mt-theme_core--light">
+        <Story />
+      </div>
+    )
+  ]
+};
+
+export const Dark: Story = {
+  args: {
+    children: 'Button'
+  },
+  decorators: [
+    (Story) => (
+      <div className="mt-theme_core--dark">
+        <Story />
+      </div>
+    )
+  ]
 };

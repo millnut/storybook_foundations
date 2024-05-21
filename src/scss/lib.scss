@@ -1,14 +1,11 @@
 @use 'sass:math';
 
-@import './fonts';
-@import './colors';
-
 /*************************
 ** Breakpoints **
 *************************/
-$sm: 768px;
-$md: 1024px;
-$lg: 1200px;
+$sm: 48rem;
+$md: 64rem;
+$lg: 75rem;
 
 /*************************
 ** Typography **
@@ -34,7 +31,7 @@ $bold: 700;
 /*************************
 ** Grid **
 *************************/
-$width: 1152px;
+$width: 72rem;
 $cols: 12;
 
 @mixin container($width: $width) {
@@ -53,7 +50,7 @@ $cols: 12;
 
 @mixin grid($cols: $cols, $size: 1fr) {
   display: grid;
-  gap: rem(24px);
+  gap: 1.5rem;
   grid-template-columns: repeat($cols, $size);
 }
 
@@ -63,24 +60,9 @@ $cols: 12;
 @mixin sr-only {
   position: absolute;
   top: auto;
-  left: -10000px;
+  left: -625rem;
   overflow: hidden;
   width: 1px;
   height: 1px;
   font-size: 1rem;
-}
-
-/*************************
-** Layout **
-*************************/
-$html-font-size: 16px;
-@media screen and (min-width: $lg) {
-  $html-font-size: 18px;
-}
-
-@function strip-unit($value) {
-  @return math.div($value, $value * 0 + 1);
-}
-@function rem($pxValue) {
-  @return #{math.div(strip-unit($pxValue), strip-unit($html-font-size))}rem;
 }

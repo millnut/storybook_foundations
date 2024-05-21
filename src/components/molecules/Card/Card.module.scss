@@ -6,10 +6,10 @@
   &__container {
     display: flex;
     flex-direction: column;
-    padding: rem(10px) rem(20px);
+    padding: 0.625rem 1.25rem;
   }
 
   &__body {
-    margin-top: rem(10px);
+    margin-top: 0.625rem;
   }
 }

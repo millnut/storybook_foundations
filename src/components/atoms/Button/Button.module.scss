@@ -1,12 +1,19 @@
 @import '../../../scss/lib';
 
 .button {
-  padding: rem(10px) rem(20px);
-  border: 1px solid $black;
-  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--mt-base-color-black);
+  border-radius: 0.3125rem;
+  cursor: pointer;
   text-decoration: none;
 }
 
 .primary {
-  background-color: #000;
+  background-color: var(--mt-color-background-primary);
+  color: var(--mt-color-font-primary);
+
+  &:hover {
+    background-color: var(--mt-color-background-primary-reversed);
+    color: var(--mt-color-font-primary-reversed);
+  }
 }
