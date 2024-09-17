@@ -51,7 +51,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.0.0",
     "lint-staged": "^15.0.1",
-    "modern-normalize": "^2.0.0",
+    "modern-normalize": "^3.0.1",
     "only-allow": "^1.2.1",
     "parcel": "^2.11.0",
     "postcss": "^8.4.31",
