@@ -1,43 +1,43 @@
-/* Normalize */
+@use 'sass:meta';
 @import 'modern-normalize/modern-normalize.css';
 
 /* Animations */
-@import './animations';
-@import './transitions';
+@include meta.load-css('animations');
+@include meta.load-css('transitions');
 
 /* Breakpoints */
-@import './breakpoints';
+@include meta.load-css('breakpoints');
 
 /* Layout */
-@import './layout';
+@include meta.load-css('layout');
 
 /* Opacities */
-@import './opacities';
+@include meta.load-css('opacities');
 
 /* Radius */
-@import './radius';
+@include meta.load-css('radius');
 
 /* Shadows */
-@import './shadows';
+@include meta.load-css('shadows');
 
 /* Spacings */
-@import './spacings';
+@include meta.load-css('spacings');
 
 /* Typography */
-@import './typography';
+@include meta.load-css('typography');
 
 /* Z Indexes */
-@import './z-indexes';
+@include meta.load-css('z-indexes');
 
 /* Utils */
-@import './lib';
+@include meta.load-css('lib');
 
 /* Colors */
 /* stylelint-disable */
 :global {
-  @import './base-colors';
-  @import './themes/default';
-  @import './themes/core-light';
-  @import './themes/core-dark';
+  @include meta.load-css('base-colors');
+  @include meta.load-css('themes/default');
+  @include meta.load-css('themes/core-light');
+  @include meta.load-css('themes/core-dark');
 }
 /* stylelint-enable */
