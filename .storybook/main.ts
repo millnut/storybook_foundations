@@ -8,13 +8,12 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-webpack5-compiler-swc',
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
     '@storybook/addon-a11y',
-    '@storybook/addon-interactions',
     {
       name: '@storybook/addon-styling-webpack',
       options: storybookAddonStylingWebpackConfig
-    }
+    },
+    '@storybook/addon-docs'
   ],
   typescript: {
     reactDocgen: 'react-docgen'
