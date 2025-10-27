@@ -27,7 +27,7 @@
     "@storybook/addon-webpack5-compiler-swc": "^4.0.1",
     "@storybook/react-webpack5": "^9.1.15",
     "@storybook/test-runner": "^0.23.0",
-    "@types/react": "^18.2.0",
+    "@types/react": "^19.2.0",
     "@types/sanitize-html": "^2.9.1",
     "autoprefixer": "^10.4.16",
     "axe-playwright": "^2.0.1",
@@ -40,8 +40,8 @@
     "parcel": "^2.11.0",
     "postcss": "^8.4.31",
     "postcss-loader": "^8.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.68.0",
     "sass-loader": "^16.0.0",
@@ -60,8 +60,8 @@
     "typescript-plugin-css-modules": "^5.1.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "dependencies": {
     "clsx": "^2.0.0",
