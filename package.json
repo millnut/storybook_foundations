@@ -33,8 +33,7 @@
     "axe-playwright": "^2.0.1",
     "chromatic": "^13.0.0",
     "css-loader": "^7.1.1",
-    "husky": "^9.0.0",
-    "lint-staged": "^16.1.5",
+    "lefthook": "^2.0.1",
     "modern-normalize": "^3.0.1",
     "only-allow": "^1.2.1",
     "parcel": "^2.11.0",
@@ -75,17 +74,8 @@
     "lint-css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint-css:fix": "stylelint --fix --allow-empty-input '**/*.{css,scss}'",
     "test-storybook": "test-storybook --maxWorkers=3",
-    "prepare": "husky",
+    "prepare": "lefthook install",
     "preinstall": "npx only-allow npm",
-    "pre-commit": "lint-staged",
     "build-package": "parcel build"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run lint"
-    ],
-    "src/**/*.{css,scss}": [
-      "npm run lint-css"
-    ]
   }
 }
