@@ -16,6 +16,13 @@ pre-commit:
         - "*.tsx"
       stage_fixed: true
 
+# Pre-push checks
+pre-push:
+  parallel: true
+  commands:
+    branchName:
+      run: npx validate-branch-name
+
 # Validate commit messages
 commit-msg:
   commands:

@@ -1,0 +1,1 @@
+pattern: '^(main|develop){1}$|^(feature|bugfix|hotfix|release)/.+$'
