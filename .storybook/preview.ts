@@ -36,7 +36,7 @@ const preview: Preview = {
         date: /Date$/i
       }
     },
-    viewport: { viewports: customViewports },
+    viewport: { options: customViewports },
     options: {
       storySort: {
         order: ['Foundations', 'Atoms', 'Molecules', 'Organisms', 'Pages']
