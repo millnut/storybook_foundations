@@ -14,12 +14,14 @@
   ],
   "license": "",
   "devDependencies": {
+    "@biomejs/biome": "2.3.1",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@parcel/packager-ts": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",
     "@parcel/transformer-typescript-types": "^2.11.0",
     "@storybook/addon-a11y": "^9.1.15",
+    "@storybook/addon-docs": "^9.1.15",
     "@storybook/addon-links": "^9.1.15",
     "@storybook/addon-styling-webpack": "^2.0.0",
     "@storybook/addon-webpack5-compiler-swc": "^4.0.1",
@@ -68,8 +70,7 @@
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-rem-over-px": "^1.0.1",
     "typescript": "^5.2.2",
-    "typescript-plugin-css-modules": "^5.1.0",
-    "@storybook/addon-docs": "^9.1.15"
+    "typescript-plugin-css-modules": "^5.1.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
