@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
-import Image, { ImageProps } from '../../atoms/Image';
+import Image, { type ImageProps } from '../../atoms/Image';
 
 import styles from './TextImage.module.scss';
 

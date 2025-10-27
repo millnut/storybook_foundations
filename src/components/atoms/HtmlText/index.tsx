@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
 import { sanitizeText } from '../../../utils/util';
 
@@ -12,9 +12,8 @@ export default function HtmlText({ body }: HtmlTextProps): ReactElement {
   return (
     <div
       className={styles.base}
-      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
-        __html: sanitizeText(body)
+        __html: sanitizeText(body),
       }}
     />
   );

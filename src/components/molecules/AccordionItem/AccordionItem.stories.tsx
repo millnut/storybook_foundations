@@ -6,9 +6,9 @@ const meta = {
   title: 'Molecules/AccordionItem',
   component: AccordionItem,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
   },
-  tags: ['autodocs']
+  tags: ['autodocs'],
 } satisfies Meta<typeof AccordionItem>;
 
 export default meta;
@@ -18,6 +18,6 @@ export const Primary: Story = {
   args: {
     id: 'id',
     summary: 'Accordion Item',
-    body: 'Content for Accordion Item'
-  }
+    body: 'Content for Accordion Item',
+  },
 };

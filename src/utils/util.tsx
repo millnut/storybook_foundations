@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import sanitizeHtml from 'sanitize-html';
 
 export function sanitizeText(text: string): string {
@@ -20,12 +20,12 @@ export function sanitizeText(text: string): string {
       'span',
       'ol',
       'ul',
-      'li'
+      'li',
     ],
     allowedAttributes: {
       '*': ['class'],
-      a: ['href', 'name', 'target']
-    }
+      a: ['href', 'name', 'target'],
+    },
   });
 }
 
@@ -33,9 +33,8 @@ export function formatText(text: string, customClass: string | undefined = undef
   return (
     <span
       className={customClass}
-      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{
-        __html: sanitizeText(text)
+        __html: sanitizeText(text),
       }}
     />
   );

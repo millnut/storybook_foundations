@@ -4,7 +4,7 @@ type UseThemeProps = { mode: 'light' | 'dark' };
 
 const useTheme = (): UseThemeProps => {
   const [mode, setMode] = useState<'light' | 'dark'>(
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
   );
 
   useEffect(() => {

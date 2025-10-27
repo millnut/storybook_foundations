@@ -6,9 +6,9 @@ const meta = {
   title: 'Atoms/Image',
   component: Image,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
   },
-  tags: ['autodocs']
+  tags: ['autodocs'],
 } satisfies Meta<typeof Image>;
 
 export default meta;
@@ -19,10 +19,10 @@ export const Primary: Story = {
     src: {
       small: 'https://placeholder.pics/svg/576x576',
       medium: 'https://placeholder.pics/svg/992x992',
-      default: 'https://placeholder.pics/svg/1440x1440'
+      default: 'https://placeholder.pics/svg/1440x1440',
     },
     width: 500,
     height: 500,
-    altText: 'An example image'
-  }
+    altText: 'An example image',
+  },
 };

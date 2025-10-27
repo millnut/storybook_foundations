@@ -6,26 +6,26 @@ const customViewports = {
     name: 'Mobile',
     styles: {
       width: '360px',
-      height: '850px'
+      height: '850px',
     },
-    type: 'mobile'
+    type: 'mobile',
   },
   tablet: {
     name: 'Tablet',
     styles: {
       width: '768px',
-      height: '1024px'
+      height: '1024px',
     },
-    type: 'tablet'
+    type: 'tablet',
   },
   desktop: {
     name: 'Desktop',
     styles: {
       width: '1200px',
-      height: '700px'
+      height: '700px',
     },
-    type: 'desktop'
-  }
+    type: 'desktop',
+  },
 };
 
 const preview: Preview = {
@@ -33,18 +33,18 @@ const preview: Preview = {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i
-      }
+        date: /Date$/i,
+      },
     },
     viewport: { options: customViewports },
     options: {
       storySort: {
-        order: ['Foundations', 'Atoms', 'Molecules', 'Organisms', 'Pages']
-      }
-    }
+        order: ['Foundations', 'Atoms', 'Molecules', 'Organisms', 'Pages'],
+      },
+    },
   },
 
-  tags: ['autodocs']
+  tags: ['autodocs'],
 };
 
 export default preview;

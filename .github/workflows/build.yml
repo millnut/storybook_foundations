@@ -48,7 +48,7 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm
-      - name: Run ESLint
+      - name: Run Lint
         run: npm run lint
       - name: Run Stylelint
         run: npm run lint-css

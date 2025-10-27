@@ -6,9 +6,9 @@ const meta = {
   title: 'Atoms/SVGImage',
   component: SVGImage,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
   },
-  tags: ['autodocs']
+  tags: ['autodocs'],
 } satisfies Meta<typeof Image>;
 
 export default meta;
@@ -19,6 +19,6 @@ export const Primary: Story = {
     src: 'https://placeholder.pics/svg/500x500',
     width: 500,
     height: 500,
-    altText: 'An example image'
-  }
+    altText: 'An example image',
+  },
 };

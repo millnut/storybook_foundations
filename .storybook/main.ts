@@ -1,6 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import { storybookAddonStylingWebpackConfig } from './addon-styling-webpack-config';
-import path from 'path';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -11,22 +10,22 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     {
       name: '@storybook/addon-styling-webpack',
-      options: storybookAddonStylingWebpackConfig
+      options: storybookAddonStylingWebpackConfig,
     },
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
   ],
   typescript: {
-    reactDocgen: 'react-docgen'
+    reactDocgen: 'react-docgen',
   },
   framework: {
     name: '@storybook/react-webpack5',
     options: {
-      builder: {}
-    }
+      builder: {},
+    },
   },
   docs: {},
   core: {
-    disableTelemetry: true
+    disableTelemetry: true,
   },
   webpackFinal: async (config) => {
     config.resolve = config.resolve ?? {};
@@ -39,10 +38,10 @@ const config: StorybookConfig = {
       url: false,
       module: false,
       assert: false,
-      perf_hooks: false
+      perf_hooks: false,
     };
 
     return config;
-  }
+  },
 };
 export default config;

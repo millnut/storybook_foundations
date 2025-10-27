@@ -1,7 +1,4 @@
-import React from 'react';
-
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-
 import Card from '../Card';
 
 import Listing from '.';
@@ -10,9 +7,9 @@ const meta = {
   title: 'Molecules/Listing',
   component: Listing,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
   },
-  tags: ['autodocs']
+  tags: ['autodocs'],
 } satisfies Meta<typeof Listing>;
 
 export default meta;
@@ -27,17 +24,17 @@ const cards = Array.from(Array(12).keys()).map((i) => (
       src: {
         small: 'https://picsum.photos/600/600',
         medium: 'https://picsum.photos/1200/1200',
-        default: 'https://picsum.photos/2400/2400'
+        default: 'https://picsum.photos/2400/2400',
       },
       width: 500,
       height: 500,
-      altText: 'An example image'
+      altText: 'An example image',
     }}
   />
 ));
 
 export const Primary: Story = {
   args: {
-    children: cards
-  }
+    children: cards,
+  },
 };

@@ -1,5 +1,5 @@
-import React, { ReactElement, ReactNode } from 'react';
 import clsx from 'clsx';
+import type { ReactElement, ReactNode } from 'react';
 
 import styles from './Button.module.scss';
 

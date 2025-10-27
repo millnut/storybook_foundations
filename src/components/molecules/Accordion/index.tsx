@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
-import AccordionItem, { AccordionItemProps } from '../AccordionItem';
+import AccordionItem, { type AccordionItemProps } from '../AccordionItem';
 
 import styles from './Accordion.module.scss';
 

@@ -14,18 +14,18 @@ export const storybookAddonStylingWebpackConfig = {
             importLoaders: 3,
             modules: {
               exportLocalsConvention: 'as-is',
-              namedExport: false
-            }
-          }
+              namedExport: false,
+            },
+          },
         },
         {
           loader: require.resolve('postcss-loader'),
           options: {
             implementation: require.resolve('postcss'),
             postcssOptions: {
-              plugins: [['autoprefixer', {}]]
-            }
-          }
+              plugins: [['autoprefixer', {}]],
+            },
+          },
         },
         require.resolve('resolve-url-loader'),
         {
@@ -34,10 +34,10 @@ export const storybookAddonStylingWebpackConfig = {
             // Want to add more Sass options? Read more here: https://webpack.js.org/loaders/sass-loader/#options
             implementation: require.resolve('sass'),
             sourceMap: true,
-            sassOptions: {}
-          }
-        }
-      ]
-    }
-  ]
+            sassOptions: {},
+          },
+        },
+      ],
+    },
+  ],
 };

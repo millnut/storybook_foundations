@@ -1,6 +1,7 @@
-import React, { ReactElement } from 'react';
+import type React from 'react';
+import type { ReactElement } from 'react';
 
-import Image, { ImageProps } from '../../atoms/Image';
+import Image, { type ImageProps } from '../../atoms/Image';
 
 import styles from './Card.module.scss';
 
@@ -31,7 +32,7 @@ export default function Card({ image, title, body, url }: CardProps): ReactEleme
     }
   }
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+    // biome-ignore lint: a11y/useKeyWithClickEvents
     <li
       className={styles.card}
       onClick={(event) => {

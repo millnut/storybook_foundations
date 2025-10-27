@@ -6,9 +6,9 @@ const meta = {
   title: 'Organisms/Alert',
   component: Alert,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
   },
-  tags: ['autodocs']
+  tags: ['autodocs'],
 } satisfies Meta<typeof Alert>;
 
 export default meta;
@@ -19,8 +19,8 @@ export const Announcement: Story = {
     token: 'alert-1--df0cdb746e87057fcd01a876c6694aa956db0179',
     type: 'announcement',
     title: 'My heading!',
-    body: 'This is an example of an alert - click hide and you should not see me again. Other alerts might be displayed on specific pages.'
-  }
+    body: 'This is an example of an alert - click hide and you should not see me again. Other alerts might be displayed on specific pages.',
+  },
 };
 
 export const Minor: Story = {
@@ -28,8 +28,8 @@ export const Minor: Story = {
     token: 'alert-2--df0cdb746e87057fcd01a876c6694aa956db0179',
     type: 'minor',
     title: 'My heading!',
-    body: 'This is an example of an alert - click hide and you should not see me again. Other alerts might be displayed on specific pages.'
-  }
+    body: 'This is an example of an alert - click hide and you should not see me again. Other alerts might be displayed on specific pages.',
+  },
 };
 
 export const Major: Story = {
@@ -37,8 +37,8 @@ export const Major: Story = {
     token: 'alert-3--df0cdb746e87057fcd01a876c6694aa956db0179',
     type: 'major',
     title: 'My heading!',
-    body: 'This is an example of an alert - click hide and you should not see me again. Other alerts might be displayed on specific pages.'
-  }
+    body: 'This is an example of an alert - click hide and you should not see me again. Other alerts might be displayed on specific pages.',
+  },
 };
 
 export const NotablePerson: Story = {
@@ -46,6 +46,6 @@ export const NotablePerson: Story = {
     token: 'alert-4--df0cdb746e87057fcd01a876c6694aa956db0179',
     type: 'notable-person',
     title: 'My heading!',
-    body: 'This is an example of an alert - click hide and you should not see me again. Other alerts might be displayed on specific pages.'
-  }
+    body: 'This is an example of an alert - click hide and you should not see me again. Other alerts might be displayed on specific pages.',
+  },
 };

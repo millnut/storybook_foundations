@@ -1,6 +1,5 @@
-import { injectAxe, checkA11y } from 'axe-playwright';
-
 import type { TestRunnerConfig } from '@storybook/test-runner';
+import { checkA11y, injectAxe } from 'axe-playwright';
 
 /*
  * See https://storybook.js.org/docs/react/writing-tests/test-runner#test-hook-api-experimental
@@ -14,10 +13,10 @@ const a11yConfig: TestRunnerConfig = {
     await checkA11y(page, '#storybook-root', {
       detailedReport: true,
       detailedReportOptions: {
-        html: true
-      }
+        html: true,
+      },
     });
-  }
+  },
 };
 
 module.exports = a11yConfig;
