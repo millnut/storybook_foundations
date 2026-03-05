@@ -1,5 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-webpack5';
-import { storybookAddonStylingWebpackConfig } from './addon-styling-webpack-config';
+import { storybookAddonStylingWebpackConfig } from './addon-styling-webpack-config.ts';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
