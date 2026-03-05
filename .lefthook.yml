@@ -2,13 +2,13 @@
 pre-commit:
   parallel: true
   jobs:
-    - run: npm run stylelint --fix {staged_files}
+    - run: npx stylelint --fix {staged_files}
       glob:
         - "*.css"
         - "*.scss"
       stage_fixed: true
 
-    - run: npm run biome check "{staged_files}" --write
+    - run: npx @biomejs/biome check "{staged_files}" --write
       glob:
         - "*.js"
         - "*.jsx"
