@@ -1,1 +1,4 @@
+ignore-scripts=true
+min-release-age=7
+
 lts/krypton
