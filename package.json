@@ -14,9 +14,9 @@
   ],
   "license": "",
   "devDependencies": {
-    "@biomejs/biome": "2.4.6",
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@biomejs/biome": "^2.4.15",
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
     "@parcel/packager-ts": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",
     "@parcel/transformer-typescript-types": "^2.11.0",
