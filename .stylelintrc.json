@@ -1,7 +1,6 @@
 {
   "plugins": ["stylelint-rem-over-px"],
   "extends": [
-    "stylelint-config-idiomatic-order",
     "stylelint-config-standard-scss",
     "stylelint-config-recommended-scss",
     "stylelint-config-sass-guidelines",
