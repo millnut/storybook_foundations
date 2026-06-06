@@ -43,7 +43,7 @@
     "react-dom": "^19.2.0",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.68.0",
-    "sass-loader": "^17.0.0",
+    "sass-loader": "^16.0.0",
     "storybook": "^10.4.2",
     "style-loader": "^4.0.0",
     "stylelint": "^17.0.0",
@@ -64,6 +64,9 @@
   "dependencies": {
     "clsx": "^2.0.0",
     "sanitize-html": "^2.11.0"
+  },
+  "overrides": {
+    "uuid": "^14.0.0"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
