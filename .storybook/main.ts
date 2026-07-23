@@ -23,6 +23,9 @@ const config: StorybookConfig = {
       builder: {},
     },
   },
+  features: {
+    sidebarOnboardingChecklist: false,
+  },
   docs: {},
   core: {
     disableTelemetry: true,

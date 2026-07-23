@@ -1,4 +1,4 @@
 ignore-scripts=true
-min-release-age=7
+min-release-age=3
 
 lts/krypton
