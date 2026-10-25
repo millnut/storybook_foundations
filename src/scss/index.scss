@@ -35,9 +35,9 @@
 /* Colors */
 /* stylelint-disable */
 :global {
-  @include meta.load-css('base-colors');
-  @include meta.load-css('themes/default');
-  @include meta.load-css('themes/core-light');
-  @include meta.load-css('themes/core-dark');
+  @include meta.load-css("base-colors");
+  @include meta.load-css("themes/default");
+  @include meta.load-css("themes/core-light");
+  @include meta.load-css("themes/core-dark");
 }
 /* stylelint-enable */

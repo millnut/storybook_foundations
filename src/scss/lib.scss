@@ -1,15 +1,15 @@
 @use 'sass:math';
 
 /*************************
-** Breakpoints **
-*************************/
+ ** Breakpoints **
+ *************************/
 $sm: 48rem;
 $md: 64rem;
 $lg: 75rem;
 
 /*************************
-** Typography **
-*************************/
+ ** Typography **
+ *************************/
 
 $font-headline: 'Times New Roman', serif;
 $font-body: 'Verdana', sans-serif;
@@ -29,8 +29,8 @@ $bold: 700;
 }
 
 /*************************
-** Grid **
-*************************/
+ ** Grid **
+ *************************/
 $width: 72rem;
 $cols: 12;
 
@@ -55,8 +55,8 @@ $cols: 12;
 }
 
 /*************************
-** Accessibility **
-*************************/
+ ** Accessibility **
+ *************************/
 @mixin sr-only {
   position: absolute;
   top: auto;

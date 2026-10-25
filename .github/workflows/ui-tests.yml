@@ -1,4 +1,4 @@
-name: 'UI Tests'
+name: "UI Tests"
 
 on:
   pull_request:
@@ -86,4 +86,3 @@ jobs:
         with:
           # Grab this from the Chromatic manage page
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-
